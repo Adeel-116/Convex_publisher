@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function SimpleButton({ text, children }) {
+export default function SimpleButton({ text, onClick, extraClass = "" }) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -23,12 +23,12 @@ export default function SimpleButton({ text, children }) {
         shadow-md 
         hover:shadow-lg
         group
-        ${children}
+        ${extraClass}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
-      {/* Subtle background animation */}
       <div className={`
         absolute 
         inset-0 
@@ -39,8 +39,7 @@ export default function SimpleButton({ text, children }) {
         duration-300
       `}></div>
 
-      {/* Content */}
-      <div className="relative z-10 flex justify-center items-center gap-2 ">
+      <div className="relative z-10 flex justify-center items-center gap-2">
         <span className="transition-transform duration-300 group-hover:translate-y-[-1px] text-center">
           {text}
         </span>

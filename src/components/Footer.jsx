@@ -1,11 +1,11 @@
 import Logo from "../assets/logo.png"
 const Footer = () => {
     return (
-      <footer className="bg-blue-400 pt-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-[#3C7BCB] pt-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center flex w-full justify-center">
-                <img src={Logo} className="w-[20%]" alt="" />
+                <img src={Logo} className="lg:w-[20%] md:w-[25%] sm:w-[40%] w-[50%]" alt="" />
           </div>
   
           {/* Description */}
@@ -55,7 +55,7 @@ const Footer = () => {
   
           {/* Copyright Section */}
           <div className="border-t pt-6 pb-8 text-center text-sm">
-            <p className="mb-2">© Premium Book Publishers 2005</p>
+            <p className="mb-2">© Convex Book Publishers 2005</p>
             <div className="flex justify-center space-x-4">
               <span>Terms of Services</span>
               <span>|</span>

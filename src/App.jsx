@@ -1,5 +1,5 @@
 import './App.css'
-import HomePage from './pages/HomePage'
+import HomePage from './Pages/HomePage/Home'
 import {useState, useEffect} from 'react'
 import LoadingScreen from './components/LoadingScreen'
 function App() {

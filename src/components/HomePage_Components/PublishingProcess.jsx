@@ -29,17 +29,17 @@ const steps = [
   ];
   
 
-const Process = () => {
+const PublishingProcess = () => {
   return (
-    <section className="px-4 py-12 text-black sm:py-16 lg:py-20">
+    <section className="px-4 py-8 text-black sm:py-10 lg:py-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className=" md:text-4xl font-bold text-center mb-8 md:mb-12">
+        <h1 className=" md:text-4xl font-bold text-center mb-8 md:mb-12">
           Our Publication Process
-        </h2>
+        </h1>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-300 md:w-1" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full bg-blue-300 w-1" />
 
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => {
@@ -52,8 +52,8 @@ const Process = () => {
                   }`}
                 >
                   {/* Content Card */}
-                  <div className="w-full md:w-5/12 p-2 order-1 md:order-none">
-                    <div className="bg-white rounded-lg shadow-md p-6 h-full transition-transform duration-300 hover:scale-105">
+                  <div className="w-full md:w-5/12  order-1 md:order-none">
+                    <div className="bg-white rounded-lg md:shadow-2xl shadow-lg p-6 h-full transition-transform duration-300 hover:scale-105">
                       <h3 className="text-xl md:text-2xl font-semibold mb-3 text-blue-600">
                         {step.title}
                       </h3>
@@ -64,8 +64,8 @@ const Process = () => {
                   </div>
 
                   {/* Number Circle */}
-                  <div className="w-4/12 md:w-auto flex items-center justify-center order-2 md:order-none my-4 md:my-0">
-                    <div className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
+                  <div className="w-4/13 md:w-auto flex items-center justify-center order-2 md:order-none my-4 md:my-0">
+                    <div className="relative flex items-center justify-center w-10 h-10 md:w-15 lg:w-20 lg:h-20 md:h-15">
                       <div className="absolute w-full h-full bg-white border-4 border-blue-400 rounded-full" />
                       <p className="text-2xl md:text-3xl font-bold text-blue-600 relative z-10">
                         0{index + 1}
@@ -85,4 +85,4 @@ const Process = () => {
   );
 };
 
-export default Process;
+export default PublishingProcess;

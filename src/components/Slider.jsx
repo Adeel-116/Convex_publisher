@@ -14,7 +14,10 @@ function Slider() {
         const container = scrollRef.current;
         container.scrollLeft += scrollSpeed;
 
-        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+        if (
+          container.scrollLeft + container.offsetWidth >=
+          container.scrollWidth
+        ) {
           container.scrollLeft = 0;
         }
       }
@@ -27,7 +30,7 @@ function Slider() {
   }, []);
 
   return (
-    <div className="w-full bg-[#fafafa] py-5.5 flex justify-center items-center">
+    <div className="w-full bg-[#3C7BCB] py-5.5 flex justify-center items-center">
       <div
         ref={scrollRef}
         className="w-[80%] flex md:px-10 md:gap-x-30 gap-x-15 scroll-smooth no-scrollbar overflow-hidden"
@@ -38,16 +41,16 @@ function Slider() {
             className="flex-shrink-0 group"
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
-            onTouchStart={() => setHoveredIndex(i)} // 👈 Mobile hover simulation
-            onTouchEnd={() => setTimeout(() => setHoveredIndex(null), 500)} // Reset after tap
+            onTouchStart={() => setHoveredIndex(i)} 
+            onTouchEnd={() => setTimeout(() => setHoveredIndex(null), 500)} 
           >
             <img
               src={brandImage}
               alt={`Partner ${i + 1}`}
               className={`
-                md:w-40 w-20 object-contain transition-all duration-300
-                ${hoveredIndex === i ? 'grayscale-0' : 'grayscale'}
-              `}
+              md:w-40 w-20 object-contain transition-all duration-300
+               filter brightness-0 invert
+  `}
             />
           </div>
         ))}

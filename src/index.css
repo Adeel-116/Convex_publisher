@@ -12,13 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@theme {
-  --color-primay: #4f27e8;
-  --color-secondary: #5025e7;
-  --color-text: #3f3e43;
-  --color-textSecondary: #3f3e43;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -29,12 +22,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #929497; 
-  border-radius: 10px;
+  background: #448FD6; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4f27e8; 
+  background: #4e27e8c0; 
 }
 
 
@@ -42,7 +34,7 @@ h1 {
   @apply 2xl:text-5xl xl:text-6xl lg:text-5xl text-4xl font-bold;
 }
 h2 {
-  @apply xl:text-4xl lg:text-3xl md:text-2xl font-bold;
+  @apply xl:text-4xl text-3xl font-bold;
 }
 h3 {
   @apply 2xl:text-2xl lg:text-xl md:text-lg text-[20px];
@@ -58,7 +50,7 @@ h6 {
 }
 
 p{
-  @apply xl:text-[18px] text-sm;
+  @apply xl:text-[18px] md:text-[16px] text-sm;
   line-height: normal;
 }
 span{
