@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import brandImage from "../assets/brandImage.png";
+import brandImage from "../assets/brand.webp";
 
 function Slider() {
   const scrollRef = useRef(null);
