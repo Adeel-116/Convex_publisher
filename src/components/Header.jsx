@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import Form from "./HomePage_Components/Form";
+import HeaderButton from "./HeaderButton";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ function Header() {
   ];
 
   return (
-    <div className="2xl:w-[80%] lg:w-[90%] w-[95%] mx-auto">
+    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center py-3">
         <div className="w-full lg:w-auto flex justify-between items-center">
           <img src={Logo} alt="Logo" width="130px" />
@@ -49,7 +50,7 @@ function Header() {
           </ul>
           <div className="flex gap-3">
             {buttons.map((btn, index) => (
-              <Button key={index} text={btn.label} onClick={btn.action} />
+              <HeaderButton btnText={btn.label} />
             ))}
           </div>
         </div>

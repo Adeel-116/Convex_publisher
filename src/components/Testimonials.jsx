@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import quote from '../assets/quote.png';
-import testimonialPicture from '../assets/man.png';
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 
 
@@ -8,7 +7,7 @@ function Testimonials() {
   const [slideNumber, setSlideNumber] = React.useState(0);
 
   const slideArray = [
-    { id: 1, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+    { id: 1, content: '“If you need a book cover design for your book, I will suggest Premium Book Publishers. I got the perfect book cover from them.”' },
     { id: 2, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
     { id: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
   ];
@@ -33,7 +32,7 @@ function Testimonials() {
 
   return (
     <div className='w-full flex items-center justify-center flex-col sm:p-5'>
-        <h1 className='text-black text-center'>What Our Past Clients Have To Say</h1>
+        <h2 className='text-black text-center'>What Our Past Clients Have To Say</h2>
         <p className='text-black mt-3 md:w-[60%] w-full text-center'>We have completed many book projects and have made clientele happy. Find out what they think of us.</p>
 
       {/* Slides Container */}
@@ -55,18 +54,9 @@ function Testimonials() {
                 <p className='sm:text-[30px] text-[16px] italic sm:leading-[1.6] text-black text-center'>{slide.content}</p>
               </div>
 
-              <div className='sm:w-[85%] w-[90%]  h-auto flex flex-row justify-center items-center'>
-                <div className="sm:w-[60px] sm:h-[60px] w-[70px] h-[70px] bg-center rounded-full">
-                  <img
-                    className="w-full h-full object-cover rounded-full"
-                    src={testimonialPicture}
-                    alt="Testimonial"
-                  />
-                </div>
-                <div className='sm:py-1 sm:px-2'>
-                  <p className='font-semibold text-black text-left'>Jenny Wilson</p>
-                  <span className='text-left  font-medium text-black sm:flex hidden'>Founder & CEO of TechyZone</span>
-                </div>
+              <div className='text-center flex flex-col '>
+                <span className='text-blue-300 font-bold'>Lauran Smith</span>
+                <span className='text-black'>Author</span>
               </div>
             </div>
           ))}

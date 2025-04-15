@@ -7,10 +7,10 @@ function PublishingSectionCard() {
       <div className="space-y-8">
         {/* Header Section */}
         <div className="">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <h2 className="text-4xl md:text-1xl font-bold text-gray-800">
             A Unique Publishing Process For Your Book
-          </h1>
-          <p className="text-gray-600 mt-4">
+          </h2>
+          <p className="text-gray-600 mt-1">
             Book Publishing Services has experience working with top writers and
             has published many best-sellers under main publishing houses. We are
             involved in publishing, printing, distribution and marketing. Our

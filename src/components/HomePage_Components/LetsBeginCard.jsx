@@ -33,11 +33,11 @@ const LetsBeginCard = () => {
         </div>
       </div>
 
-      <div className="xl:w-[45%] md:w-[45%] w-full  md:flex lg:justify-end">
+      <div className="xl:w-[45%] md:w-[45%] w-full md:flex lg:justify-end">
         <img
           src={BookImage}
           alt="Book Mobile"
-          className="w-full h-auto drop-shadow-[10px_10px_15px_rgba(0,0,0,0.4)]"
+          className="w-full h-auto"
         />
       </div>
 

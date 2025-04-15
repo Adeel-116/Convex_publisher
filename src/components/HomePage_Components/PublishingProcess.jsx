@@ -54,7 +54,7 @@ const PublishingProcess = () => {
                   {/* Content Card */}
                   <div className="w-full md:w-5/12  order-1 md:order-none">
                     <div className="bg-white rounded-lg md:shadow-2xl shadow-lg p-6 h-full transition-transform duration-300 hover:scale-105">
-                      <h3 className="text-xl md:text-2xl font-semibold mb-3 text-blue-600">
+                      <h3 className="text-xl md:text-2xl font-semibold mb-3 text-black">
                         {step.title}
                       </h3>
                       <p className="text-gray-700 text-base md:text-lg">

@@ -31,13 +31,13 @@
 
 
 h1 {
-  @apply 2xl:text-5xl xl:text-6xl lg:text-5xl text-4xl font-bold;
+  @apply 2xl:text-5xl xl:text-[50px] lg:text-5xl text-3xl font-bold;
 }
 h2 {
-  @apply xl:text-4xl text-3xl font-bold;
+  @apply 2xl:text-4xl sm:text-[37px] text-2xl font-bold;
 }
 h3 {
-  @apply 2xl:text-2xl lg:text-xl md:text-lg text-[20px];
+  @apply 2xl:text-2xl lg:text-2xl md:text-lg text-[20px];
 }
 h4 {
   @apply xl:text-lg md:text-lg;
@@ -46,16 +46,14 @@ h5 {
   @apply text-2xl;
 }
 h6 {
-  @apply text-base;
+  @apply sm:text-base text-[14px];
 }
 
 p{
-  @apply xl:text-[18px] md:text-[16px] text-sm;
+  @apply xl:text-[16px] md:text-[16px] text-sm;
   line-height: normal;
 }
-span{
-  @apply text-sm lg:text-[12.5px] 
-}
+
 
 
 .verticalAnimation {

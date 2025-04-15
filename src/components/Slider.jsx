@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import brandImage from "../assets/brand.webp";
+import brandImage from "../assets/brandImage.png";
 
 function Slider() {
   const scrollRef = useRef(null);
@@ -30,10 +30,10 @@ function Slider() {
   }, []);
 
   return (
-    <div className="w-full bg-[#3C7BCB] py-5.5 flex justify-center items-center">
+    <div className="w-full bg-[#3C7BCB] py-6 flex justify-center items-center">
       <div
         ref={scrollRef}
-        className="w-[80%] flex md:px-10 md:gap-x-30 gap-x-15 scroll-smooth no-scrollbar overflow-hidden"
+        className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] flex md:px-10 md:gap-x-30 gap-x-15 scroll-smooth no-scrollbar overflow-hidden"
       >
         {[...Array(10)].map((_, i) => (
           <div

@@ -17,7 +17,7 @@ function App() {
   return (
     <>  
    
-       {loading ? <LoadingScreen /> : <HomePage />}
+       <HomePage />
       
     </>
   )

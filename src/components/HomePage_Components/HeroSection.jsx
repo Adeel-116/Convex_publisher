@@ -1,21 +1,18 @@
 import React, {useState} from "react";
 import Button from "../Button"
-import ratingImage from "../../assets/toprating.png"
+import clutch from "../../assets/clutch.png"
 import Form from "./Form";
 function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
-    <div className="2xl:w-[80%] lg:w-[90%] md:w-[95%] w-[90%] h-auto flex md:flex-nowrap flex-wrap gap-y-3">
-      <div className="md:w-1/2 w-full flex flex-col gap-y-2 justify-center">
-        <h6>Get your story written</h6>
-        <h1 className="xl:w-[90%] w-full">
-          Become a popular author with Premium Book Publishers!
+    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] h-auto flex md:flex-nowrap flex-wrap gap-y-3">
+      <div className="md:w-[60%] w-full flex flex-col gap-y-2 justify-center">
+        <h6>Expert Book Publishing Services</h6>
+        <h1 className=" w-full">
+        Publishing Your Precious Work – Premium Book Publishers
         </h1>
-        <p className="xl:w-[80%] w-full">
-          It is our aim to make your stories become a reality on paper allowing
-          them to attract many readers. Our professionals follow a proper
-          approach and are creative following what is trending in the writing
-          industry. Simply tell us what your plot is and we will do the rest.
+        <p className=" w-full">
+        If you are finding it tough to publish your work by yourself, or if you are not getting any approval from publishers, do not worry. Premium Book Publishers can help you with your publishing work. We work with main publishing houses so can get the right publishing strategy for new writers.
         </p>
 
         <div className="button flex space-x-2 mt-3 flex-wrap gap-y-3">
@@ -24,34 +21,34 @@ function HeroSection() {
           <Button text="+1302-518-4405" />
         </div>
 
-        <div className="flex h-auto space-x-2 md:flex-row">
+        <div className="flex h-auto space-x-3 md:flex-row mt-1">
           <img
-            src={ratingImage}
+            src={clutch}
             alt="review-images"
-            className="lg:w-[130px] md:w-[120px] w-[80px]"
+            className="lg:w-[65px] md:w-[60px]"
           />
           <img
-            src={ratingImage}
+            src={clutch}
             alt="review-images"
-            className="lg:w-[130px] md:w-[120px] w-[80px]"
+            className="lg:w-[65px] md:w-[60px]"
           />
           <img
-            src={ratingImage}
+            src={clutch}
             alt="review-images"
-            className="lg:w-[130px] md:w-[120px] w-[80px]"
+            className="lg:w-[65px] md:w-[60px]"
           />
         </div>
 
         <div className="text-wite flex items-center gap-1">
           <span>
-            Rated 9 out of 10 ⭐⭐⭐⭐⭐ based on 3,543 satisfied customers
+            Rated 9 out of 10 ⭐⭐⭐⭐⭐ based on 3,543 satisfied customers.
           </span>
         </div>
       </div>
 
-        <div className="md:w-1/2 w-full flex md:justify-end">
-         <div className="xl:w-[60%] lg:w-[75%] md:w-[85%] w-full">
-          <Form text="UP TO 50% DISCOUNT" parapgraph={""} children="bg-gray-100 w-full"/>
+        <div className="md:w-[40%] w-full flex md:justify-end items-center">
+         <div className="2xl:w-[85%] xl:[82%] lg:w-[85%] md:w-[100%] w-full">
+          <Form text="UP TO 50% DISCOUNT" parapgraph={""} children="bg-white w-full" selectbox={false}/>
         </div>
       </div>
 

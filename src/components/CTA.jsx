@@ -7,7 +7,7 @@ function CTA() {
   return (
     <div className="bg-white py-15 px-4 sm:px-6 lg:px-8">
     <div className="w-full mx-auto text-center flex flex-col justify-center items-center sm:gap-y-5 gap-y-4" >
-      <p className=" font-bold text-gray-900 ">
+      <p className="font-medium text-gray-900 ">
         Stopping The Stresses Of Book Publication
       </p>
       <h2 className="lg:w-[60%] text-center sm:w-[80%] w-full text-black">

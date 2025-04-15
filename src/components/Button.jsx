@@ -8,8 +8,7 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
       className={`
         relative 
         overflow-hidden 
-        px-6 py-2.5
-        rounded-md 
+        px-3 py-3 
         font-medium 
         text-white 
         bg-gradient-to-r 
@@ -40,7 +39,7 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
       `}></div>
 
       <div className="relative z-10 flex justify-center items-center gap-2">
-        <span className="transition-transform duration-300 group-hover:translate-y-[-1px] text-center">
+        <span className="transition-transform duration-300 group-hover:translate-y-[-1px] text-[15px] text-center">
           {text}
         </span>
       </div>

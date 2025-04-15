@@ -5,7 +5,7 @@ import InputField from "../InputField";
 import SelectBox from "../SelectBox";
 import PopUp from "../PopUp";
 
-function Form({ text, parapgraph, children }) {
+function Form({ text, parapgraph, children, selectbox }) {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -79,11 +79,10 @@ function Form({ text, parapgraph, children }) {
   };
 
   return (
-    <div className={`${children} w-auto rounded-xl shadow-md py-4 px-5 max-w-3xl mx-auto`}>
-      <h2 className="font-bold text-gray-600 text-center">{text}</h2>
-      <p className="text-gray-600 my-6 text-center">{parapgraph}</p>
+    <div className={`${children} w-auto rounded-lg p-7 md:px-7 sm:px-10`}>
+      <h3 className="font-bold text-gray-600 text-center">{text}</h3>
 
-      <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+      <form ref={formRef} onSubmit={sendEmail} className="space-y-6 mt-3">
         <div className="grid grid-cols-1 gap-6">
           <InputField
             label="Enter Your Name *"
@@ -109,7 +108,8 @@ function Form({ text, parapgraph, children }) {
             required
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          selectbox ? <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <SelectBox
               label="Select a Service"
               name="service"
@@ -134,7 +134,8 @@ function Form({ text, parapgraph, children }) {
                 "Custom Budget",
               ]}
             />
-          </div>
+          </div> : ""
+        }
 
           <div>
             <textarea
@@ -150,7 +151,7 @@ function Form({ text, parapgraph, children }) {
 
         <div className="w-full">
           <Button
-            text={isSending ? "Sending..." : "Contact With US"}
+            text={isSending ? "Sending..." : "Submit"}
             extraClass={`w-full text-center ${isSending ? "opacity-50 cursor-not-allowed" : ""}`}
             type="submit"
             disabled={isSending}

@@ -27,38 +27,38 @@ function HomePage() {
           <Slider />
         </div>
        
-        <section className="w-full h-auto flex justify-center">
+       <section className="w-full h-auto flex justify-center">
           <PublishingJourney />
         </section>
 
-        <section className="2xl:w-[80%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
+        <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
           <CTA />
         </section>
 
-        <section className="2xl:w-[80%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
+      <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
           <PublishingProcess />
-        </section>
+        </section> 
 
-        <section className="2xl:w-[80%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
+       <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
           <LetsBeginCard />
         </section>
 
-        <div className="bg-[#f9fafb]">
+      <div className="bg-[#f9fafb]">
         <section className="bg-[#F9FAFB] 2xl:w-[80%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto py-10">
             <Testimonials />
         </section>
         </div>
 
 
-        <section className="py-10">
+       {/* <section className="py-10">
              <Form text="Let’s Begin The Journey"  parapgraph="Call us +1 302-518-4405 or use the form below to start a conversation and show you how we can help!" />
-        </section>
+        </section> */}
 
 
-        <section className="">
+        {/*   <section className="">
              <Footer />
         </section>
-      
+       */}
 
         
 
