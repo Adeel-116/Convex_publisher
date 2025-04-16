@@ -8,7 +8,7 @@ function InputField({ label, name, type = "text", required = false, value, onCha
         placeholder={label}
         value={value}
         onChange={onChange}
-        className="py-3 px-3 block w-full border text-black border-gray-300 focus:border-[#00c0ff] focus:ring-[#00c0ff] text-sm"
+        className="md:py-3.5 py-[7px] px-3.5 text-[13px] font-medium block w-full border-2 text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black text-sm transition-colors duration-200"
       />
     </div>
   );

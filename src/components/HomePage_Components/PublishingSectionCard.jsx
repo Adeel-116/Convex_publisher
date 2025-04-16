@@ -7,7 +7,7 @@ function PublishingSectionCard() {
       <div className="space-y-8">
         {/* Header Section */}
         <div className="">
-          <h2 className="text-4xl md:text-1xl font-bold text-gray-800">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
             A Unique Publishing Process For Your Book
           </h2>
           <p className="text-gray-600 mt-1">

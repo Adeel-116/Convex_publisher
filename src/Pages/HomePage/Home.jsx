@@ -9,13 +9,13 @@ import LetsBeginCard from "../../components/HomePage_Components/LetsBeginCard";
 import Testimonials from "../../components/Testimonials";
 import Form from "../../components/HomePage_Components/Form";
 import Footer from "../../components/Footer"
-
+import ContactForm from "../../components/ContactForm";
 
 function HomePage() {
   return (
     <>
       <div className="w-full h-auto flex flex-col">
-        <header className="w-full bg-white">
+        <header className="w-full bg-white pt-20">
           <Header />
         </header>
 
@@ -43,22 +43,21 @@ function HomePage() {
           <LetsBeginCard />
         </section>
 
-      <div className="bg-[#f9fafb]">
+        <div className="bg-[#f9fafb]">
         <section className="bg-[#F9FAFB] 2xl:w-[80%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto py-10">
             <Testimonials />
         </section>
         </div>
 
+       <section className="py-10">
+            <ContactForm/>
+        </section>
 
-       {/* <section className="py-10">
-             <Form text="Let’s Begin The Journey"  parapgraph="Call us +1 302-518-4405 or use the form below to start a conversation and show you how we can help!" />
-        </section> */}
 
-
-        {/*   <section className="">
+          <section className="">
              <Footer />
         </section>
-       */}
+      
 
         
 

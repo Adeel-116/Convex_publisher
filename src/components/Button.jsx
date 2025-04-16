@@ -8,7 +8,7 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
       className={`
         relative 
         overflow-hidden 
-        px-3 py-3 
+        px-3 py-3
         font-medium 
         text-white 
         bg-gradient-to-r 

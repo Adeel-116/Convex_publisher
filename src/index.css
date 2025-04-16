@@ -33,9 +33,6 @@
 h1 {
   @apply 2xl:text-5xl xl:text-[50px] lg:text-5xl text-3xl font-bold;
 }
-h2 {
-  @apply 2xl:text-4xl sm:text-[37px] text-2xl font-bold;
-}
 h3 {
   @apply 2xl:text-2xl lg:text-2xl md:text-lg text-[20px];
 }
@@ -49,11 +46,31 @@ h6 {
   @apply sm:text-base text-[14px];
 }
 
-p{
+/* p{
   @apply xl:text-[16px] md:text-[16px] text-sm;
   line-height: normal;
+} */
+
+
+.bg-image {
+  width: 194px; /* Adjust as needed */
+  height: auto;
+  background-image: url('./assets/cup.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 5;
 }
 
+.bg-image2{
+  width: 95px; /* Adjust as needed */
+  height: auto;
+  background-image: url('./assets/leave.png'); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 5;
+}
 
 
 .verticalAnimation {

@@ -10,14 +10,14 @@ const LetsBeginCard = () => {
     <div className="w-full h-auto flex md:flex-nowrap flex-wrap gap-y-3">
       <div className="xl:w-[55%] md:w-[60%] w-full  flex flex-col gap-y-1 justify-center">
         <div className="w-full mx-auto">
-          {/* Main Content */}
-          <div className="space-y-8">
-            {/* Header Section */}
+          
+          <div className="space-y-6">
+           
             <div className="">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
                 Let’s Begin
               </h1>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 mt-2 lg:text-[16px] text-[15px]">
                 We are a ghostwriting and Publication company, providing a range
                 of book services to help make the work of writers easier.
                 Contact us today to find out more!
@@ -36,8 +36,8 @@ const LetsBeginCard = () => {
       <div className="xl:w-[45%] md:w-[45%] w-full md:flex lg:justify-end">
         <img
           src={BookImage}
-          alt="Book Mobile"
-          className="w-full h-auto"
+          alt="BookImage"
+          className="w-full sm:h-auto h-[230px]"
         />
       </div>
 
