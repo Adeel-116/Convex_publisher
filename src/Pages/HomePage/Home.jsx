@@ -19,7 +19,7 @@ function HomePage() {
           <Header />
         </header>
 
-        <section className="hero-Section w-full relative py-15 bg-gray-900 flex justify-center items-center">
+        <section className="hero-Section bg-image3 w-full relative py-15 bg-gray-900 flex justify-center items-center">
          <HeroSection />
         </section>
 

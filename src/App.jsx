@@ -1,23 +1,13 @@
 import './App.css'
+import BookCallContact from './components/BookCallContact'
+import GetAQuoteForm from './components/GetQuoteForm'
 import HomePage from './Pages/HomePage/Home'
-import {useState, useEffect} from 'react'
-import LoadingScreen from './components/LoadingScreen'
+
 function App() {
-    const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        setLoading(true)
-        const timer = setTimeout(() => {
-            setLoading(false)
-        }, 3000)
-
-        return () => clearTimeout(timer) 
-    }, [])
-
-
   return (
     <>  
    
-       <HomePage />
+      <HomePage />
       
     </>
   )

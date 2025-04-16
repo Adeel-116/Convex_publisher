@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Application Development (MAD) - Study Notes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e74c3c;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #333;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .note {
+            background-color: #d5f5e3;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2ecc71;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .code-xml {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+        }
+        .code-java {
+            background-color: #e8f4fd;
+            border-left: 4px solid #42a5f5;
+        }
+        .top-link {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #2c3e50;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Mobile Application Development (MAD) - Study Notes</h1>
+        
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#java-fundamentals">Java Fundamentals & OOP Concepts</a></li>
+            <li><a href="#android-architecture">Android Architecture & Project Structure</a></li>
+            <li><a href="#ui-components">UI Components & Layouts</a></li>
+            <li><a href="#view-binding">View Binding & Event Handling</a></li>
+            <li><a href="#string-resources">String Resources & Hardcode vs Softcode</a></li>
+            <li><a href="#intent">Intent & Navigation</a></li>
+            <li><a href="#splash-screen">Splash Screen</a></li>
+            <li><a href="#lists">ListView & RecyclerView</a></li>
+            <li><a href="#cardview">CardView</a></li>
+            <li><a href="#collections">Array & ArrayList</a></li>
+            <li><a href="#viewholder">ViewHolder Pattern</a></li>
+            <li><a href="#custom-layout">Custom Layout</a></li>
+            <li><a href="#lifecycle">Activity Lifecycle</a></li>
+            <li><a href="#tips">Quick Reference Tips for Exam</a></li>
+        </ul>
+    </div>
+
+    <div id="java-fundamentals" class="section">
+        <h2>1. Java Fundamentals & OOP Concepts</h2>
+
+        <h3>Variables & Data Types</h3>
+        <ul>
+            <li><strong>Variables</strong>: Named memory locations that store data values</li>
+            <li><strong>Variable Naming Rules</strong>: A-Z, a-z, 0-9 (not at start), underscore (_), $ symbol</li>
+            <li><strong>Primitive Data Types</strong>:
+                <ul>
+                    <li><strong>byte</strong>: 8-bit integer (-128 to 127)</li>
+                    <li><strong>short</strong>: 16-bit integer (-32,768 to 32,767)</li>
+                    <li><strong>char</strong>: 16-bit Unicode character (0 to 65,535)</li>
+                    <li><strong>int</strong>: 32-bit integer (-2^31 to 2^31-1)</li>
+                    <li><strong>long</strong>: 64-bit integer (-2^63 to 2^63-1)</li>
+                    <li><strong>float</strong>: 32-bit floating point</li>
+                    <li><strong>double</strong>: 64-bit floating point</li>
+                </ul>
+            </li>
+            <li><strong>Type Casting</strong>: 
+                <ul>
+                    <li><strong>Implicit</strong> (automatic): Converting smaller type to larger type</li>
+                    <li><strong>Explicit</strong> (manual): Converting larger type to smaller type using (type)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Operators</h3>
+        <ol>
+            <li><strong>Arithmetic</strong>: +, -, *, /, % (mathematical operations)</li>
+            <li><strong>Assignment</strong>: =, +=, -=, *=, /=, %= (assign values to variables)</li>
+            <li><strong>Comparison</strong>: >, <, <=, >=, ==, != (compare values)</li>
+            <li><strong>Logical</strong>: &&, ||, ! (combine boolean expressions)</li>
+            <li><strong>Binary</strong>: &, |, ^ (bitwise operations)</li>
+            <li><strong>Unary</strong>: ++, -- (increment/decrement)</li>
+            <li><strong>Ternary</strong>: ? : (shorthand for if-else)</li>
+        </ol>
+
+        <h3>OOP Concepts</h3>
+        <ul>
+            <li><strong>Classes and Objects</strong>: 
+                <ul>
+                    <li><strong>Class</strong>: Blueprint defining properties and behaviors</li>
+                    <li><strong>Object</strong>: Instance of a class</li>
+                </ul>
+            </li>
+            <li><strong>Method Overloading</strong>: Multiple methods with same name but different parameters in same class</li>
+            <li><strong>Inheritance</strong>: Mechanism where a child class inherits properties/methods from parent class
+                <ul>
+                    <li><strong>Extends</strong> keyword used for inheritance</li>
+                    <li>Promotes code reuse and establishes is-a relationship</li>
+                </ul>
+            </li>
+            <li><strong>Encapsulation</strong>: Data hiding through access modifiers
+                <ul>
+                    <li><strong>Private</strong>: Accessible only within the class</li>
+                    <li><strong>Protected</strong>: Accessible within package and subclasses</li>
+                    <li><strong>Public</strong>: Accessible from anywhere</li>
+                </ul>
+            </li>
+            <li><strong>Polymorphism</strong>: 
+                <ul>
+                    <li><strong>Method Overriding</strong>: Child class providing specific implementation of parent's method</li>
+                    <li><strong>Interface Implementation</strong>: Class implementing interface methods</li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="android-architecture" class="section">
+        <h2>2. Android Architecture & Project Structure</h2>
+
+        <h3>Android Architecture (4-Layer)</h3>
+        <ul>
+            <li><strong>Linux Kernel</strong>: Core services (hardware drivers, memory management, process management, security)</li>
+            <li><strong>Libraries & Runtime</strong>: 
+                <ul>
+                    <li>Native C/C++ libraries for core functionality</li>
+                    <li>Android Runtime (ART) executes Dalvik bytecode</li>
+                </ul>
+            </li>
+            <li><strong>Application Framework</strong>: Java API framework with manager classes
+                <ul>
+                    <li>Activity Manager, Window Manager, Content Providers, Resource Manager, etc.</li>
+                </ul>
+            </li>
+            <li><strong>Applications</strong>: User-installed and system apps (top layer)</li>
+        </ul>
+
+        <h3>Project Structure</h3>
+        <ul>
+            <li><strong>manifests/</strong>: Contains AndroidManifest.xml
+                <ul>
+                    <li>Declares app components, permissions, features, and requirements</li>
+                </ul>
+            </li>
+            <li><strong>java/</strong>: Contains Java/Kotlin source code
+                <ul>
+                    <li>Application logic, activities, fragments, services</li>
+                </ul>
+            </li>
+            <li><strong>res/</strong>: Contains resources (separate from code)
+                <ul>
+                    <li><strong>layout/</strong>: XML layout files (UI definitions)</li>
+                    <li><strong>values/</strong>: strings.xml, colors.xml, styles.xml (text, colors, themes)</li>
+                    <li><strong>drawable/</strong>: Images, shapes, and XML drawables</li>
+                    <li><strong>mipmap/</strong>: App icons in different densities</li>
+                    <li><strong>raw/</strong>: Raw files like audio, video</li>
+                    <li><strong>anim/</strong>: Animation definitions</li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="ui-components" class="section">
+        <h2>3. UI Components & Layouts</h2>
+
+        <h3>Layouts (ViewGroups)</h3>
+        <ol>
+            <li>
+                <strong>LinearLayout</strong>: Arranges elements sequentially
+                <ul>
+                    <li><strong>orientation</strong>: vertical/horizontal determines arrangement direction</li>
+                    <li><strong>weight</strong>: distributes space proportionally among children</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"&gt;
+    &lt;!-- Child views arranged vertically --&gt;
+&lt;/LinearLayout&gt;</code></pre>
+            </li>
+
+            <li>
+                <strong>RelativeLayout</strong>: Positions elements relative to parent or siblings
+                <ul>
+                    <li>Elements positioned using rules (below, toRightOf, alignParentBottom, etc.)</li>
+                    <li>More complex than LinearLayout but flexible for complex UIs</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+    &lt;TextView
+        android:id="@+id/text1"
+        android:layout_below="@id/text2" /&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+            </li>
+
+            <li>
+                <strong>ConstraintLayout</strong>: Modern layout with constraint-based positioning
+                <ul>
+                    <li>Flat view hierarchy (better performance)</li>
+                    <li>Responsive to different screen sizes</li>
+                    <li>Constraint handles define relationships between views</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+    &lt;!-- Views positioned with constraints --&gt;
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+            </li>
+        </ol>
+
+        <h3>View Components (UI Elements)</h3>
+        <ol>
+            <li>
+                <strong>TextView</strong>: Display text
+                <ul>
+                    <li>Non-editable text display</li>
+                    <li>Supports formatting, styling, and text appearance customization</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World"
+    android:textSize="20sp"
+    android:textColor="#000000" /&gt;</code></pre>
+            </li>
+
+            <li>
+                <strong>EditText</strong>: Input field
+                <ul>
+                    <li>Subclass of TextView that allows editing</li>
+                    <li>Different input types (text, number, password, email, etc.)</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;EditText
+    android:id="@+id/editText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter text here"
+    android:inputType="text" /&gt;</code></pre>
+            </li>
+
+            <li>
+                <strong>Button</strong>: Clickable button
+                <ul>
+                    <li>Triggers actions when clicked</li>
+                    <li>Can be customized with text, background, style</li>
+                </ul>
+                <pre class="code-xml"><code>&lt;Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click Me" /&gt;</code></pre>
+            </li>
+        </ol>
+
+        <h3>Common Attributes (Properties)</h3>
+        <ul>
+            <li><strong>layout_width/height</strong>: Size dimensions
+                <ul>
+                    <li><strong>match_parent</strong>: Fill parent container</li>
+                    <li><strong>wrap_content</strong>: Size to content</li>
+                    <li><strong>dp values</strong>: Fixed dimensions</li>
+                </ul>
+            </li>
+            <li><strong>id</strong>: Unique identifier (@+id/name) for referencing in Java/XML</li>
+            <li><strong>padding</strong>: Space inside the view (internal)</li>
+            <li><strong>margin</strong>: Space outside the view (external)</li>
+            <li><strong>visibility</strong>: visible, invisible (takes space), gone (no space)</li>
+            <li><strong>textSize</strong>: Text size in sp units (scale-independent pixels)</li>
+            <li><strong>textColor</strong>: Text color in hex (#RRGGBB)</li>
+            <li><strong>background</strong>: Background color/drawable</li>
+        </ul>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="view-binding" class="section">
+        <h2>4. View Binding & Event Handling</h2>
+
+        <h3>View Binding (Connecting UI to Code)</h3>
+        <p>Traditional findViewById method</p>
+        <pre class="code-java"><code>// In onCreate() method
+Button submitButton = findViewById(R.id.submit_button);
+EditText nameField = findViewById(R.id.name_field);</code></pre>
+
+        <h3>Event Handling</h3>
+        <ul>
+            <li>Responding to user interactions through listeners</li>
+            <li>Common events: click, long-click, touch, focus change</li>
+        </ul>
+
+        <h3>Click Listeners (Most Common)</h3>
+        <pre class="code-java"><code>submitButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        String name = nameField.getText().toString();
+        // Process the input
+    }
+});</code></pre>
+
+        <h3>Toast Messages (Simple Feedback)</h3>
+        <ul>
+            <li>Brief, non-interactive popup messages</li>
+            <li>Duration: LENGTH_SHORT (2 seconds) or LENGTH_LONG (3.5 seconds)</li>
+        </ul>
+        <pre class="code-java"><code>Toast.makeText(MainActivity.this, "Your message here", Toast.LENGTH_SHORT).show();</code></pre>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="string-resources" class="section">
+        <h2>5. String Resources & Hardcode vs Softcode</h2>
+
+        <h3>Hardcoded Values (Not Recommended)</h3>
+        <ul>
+            <li>Values directly embedded in code or layout</li>
+            <li>Problems: difficult to update, doesn't support localization</li>
+        </ul>
+        <pre class="code-xml"><code>&lt;TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World" /&gt;</code></pre>
+
+        <h3>String Resources (Softcoded - Recommended)</h3>
+        <ul>
+            <li>Values defined in resource files</li>
+            <li>Benefits: centralized management, localization support, easier updates</li>
+            <li><strong>strings.xml</strong>: Contains text values</li>
+            <li><strong>dimens.xml</strong>: Dimension values</li>
+            <li><strong>colors.xml</strong>: Color values</li>
+        </ul>
+
+        <p>In strings.xml:</p>
+        <pre class="code-xml"><code>&lt;resources&gt;
+    &lt;string name="greeting"&gt;Hello World&lt;/string&gt;
+&lt;/resources&gt;</code></pre>
+
+        <p>In layout:</p>
+        <pre class="code-xml"><code>&lt;TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/greeting" /&gt;</code></pre>
+
+        <p>In Java:</p>
+        <pre class="code-java"><code>String greeting = getString(R.string.greeting);</code></pre>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="intent" class="section">
+        <h2>6. Intent & Navigation</h2>
+
+        <h3>Intent Class</h3>
+        <ul>
+            <li>Messaging object that communicates between components</li>
+            <li>Core functionality:
+                <ul>
+                    <li>Starting activities</li>
+                    <li>Starting services</li>
+                    <li>Delivering broadcasts</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Types of Intents</h3>
+        <ol>
+            <li>
+                <strong>Explicit Intent</strong>: Targets specific component by name
+                <ul>
+                    <li>Used for communication within same app</li>
+                    <li>Component is specified directly</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Implicit Intent</strong>: Declares general action
+                <ul>
+                    <li>System finds compatible component</li>
+                    <li>May show chooser if multiple options available</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Starting a New Activity</h3>
+        <pre class="code-java"><code>// Explicit Intent
+Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+startActivity(intent);</code></pre>
+
+        <h3>Passing Data Between Activities</h3>
+        <ul>
+            <li>Using extras (key-value pairs) for data transfer</li>
+        </ul>
+        <pre class="code-java"><code>// Sending data
+Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+intent.putExtra("key_name", "value");
+startActivity(intent);
+
+// Receiving data in SecondActivity
+String value = getIntent().getStringExtra("key_name");</code></pre>
+
+        <h3>Intent Filters</h3>
+        <ul>
+            <li>Declared in manifest to specify which implicit intents a component can handle</li>
+            <li>Defines actions, categories, and data types</li>
+        </ul>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <div id="splash-screen" class="section">
+        <h2>7. Splash Screen</h2>
+
+        <h3>Purpose</h3>
+        <ul>
+            <li>Introductory screen displayed when app launches</li>
+            <li>Provides visual feedback during initial loading</li>
+            <li>Brand reinforcement and user experience enhancement</li>
+        </ul>
+
+        <h3>Creating a Splash Screen</h3>
+        <ol>
+            <li>Create splash_activity.xml layout (visual design)</li>
+            <li>Create SplashActivity.java (logic for timing and transition)</li>
+            <li>Use Handler for delayed navigation</li>
+            <li>Configure in AndroidManifest.xml as launcher activity</li>
+        </ol>
+
+        <pre class="code-java"><code>// SplashActivity.java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_splash);
+    
+    new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close SplashActivity to prevent going back
+        }
+    }, 3000); // 3 seconds delay
+}</code></pre>
+
+        <h3>AndroidManifest.xml Configuration</h3>
+        <ul>
+            <li>Sets SplashActivity as entry point with LAUNCHER category</li>
+        </ul>
+        <pre class="code-xml"><code>&lt;activity
+    android:name=".SplashActivity"
+    android:exported="true"&gt;
+    &lt;intent-filter&gt;
+        &lt;action android:name="android.intent.action.MAIN" /&gt;
+        &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+    &lt;/intent-filter&gt;
+&lt;/activity&gt;</code></pre>
+        <a href="#" class="top-link">↑ Back to Top</a>
+    </div>
+
+    <!-- Continued in next sections... -->
+</body>
+</html> 

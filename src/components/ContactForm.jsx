@@ -51,6 +51,7 @@ function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  extraClases={"md:py-3.5 py-[9px] px-3.5"}
                 />
               </div>
 
@@ -62,6 +63,7 @@ function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  extraClases={"md:py-3.5 py-[9px] px-3.5"}
                 />
               </div>
             </div>
@@ -89,6 +91,7 @@ function ContactForm() {
                     "Author Website",
                     "Article Writing",
                   ]}
+                  extraClases={"md:py-3.5 py-[9px] px-3.5"}
                 />
               </div>
 
@@ -109,6 +112,7 @@ function ContactForm() {
                     "Up to 9000",
                     "Above 10000",
                   ]}
+                  extraClases={"md:py-3.5 py-[9px] px-3.5"}
                 />
               </div>
             </div>
@@ -121,6 +125,7 @@ function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                extraClases={"md:py-3.5 py-[9px] px-3.5"}
               />
             </div>
 

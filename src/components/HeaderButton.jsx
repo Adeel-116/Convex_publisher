@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-function HeaderButton({ btnText, bgColor = "#007bff" }) {
+function HeaderButton({ btnText, onClick, bgColor = "#007bff" }) {
   return (
-    <a
-      href="#"
+    <button
+      onClick={onClick}
       style={{ backgroundColor: bgColor }}
-      className="block text-white no-underline py-2 px-3 rounded-[5px] text-center text-[14px]"
+      className="text-white py-2 px-3 rounded-[5px] text-center text-[14px]"
     >
       {btnText}
-    </a>
-  )
+    </button>
+  );
 }
 
-export default HeaderButton
+export default HeaderButton;

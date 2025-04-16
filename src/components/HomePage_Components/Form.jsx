@@ -5,7 +5,7 @@ import InputField from "../InputField";
 import SelectBox from "../SelectBox";
 import PopUp from "../PopUp";
 
-function Form({ text, parapgraph, children, selectbox }) {
+function Form({ text, parapgraph, children,  }) {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -90,6 +90,7 @@ function Form({ text, parapgraph, children, selectbox }) {
             value={formData.user_name}
             onChange={handleChange}
             required
+            extraClases={"md:py-3.5 py-[10px] px-3.5"}
           />
           <InputField
             label="Enter Email Here *"
@@ -98,6 +99,7 @@ function Form({ text, parapgraph, children, selectbox }) {
             value={formData.user_email}
             onChange={handleChange}
             required
+            extraClases={"md:py-3.5 py-[10px] px-3.5"}
           />
           <InputField
             label="Phone Number *"
@@ -106,36 +108,8 @@ function Form({ text, parapgraph, children, selectbox }) {
             value={formData.user_phone}
             onChange={handleChange}
             required
+            extraClases={"md:py-3.5 py-[10px] px-3.5"}
           />
-
-        {
-          selectbox ? <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <SelectBox
-              label="Select a Service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              options={[
-                "Web Development",
-                "App Development",
-                "Graphic Design",
-                "Digital Marketing",
-              ]}
-            />
-            <SelectBox
-              label="Select Your Budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              options={[
-                "$500 - $1000",
-                "$1000 - $5000",
-                "$5000 - $10000",
-                "Custom Budget",
-              ]}
-            />
-          </div> : ""
-        }
 
           <div>
             <textarea

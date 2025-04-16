@@ -17,7 +17,7 @@ function Slider() {
   const animationRef = useRef(null);
 
   useEffect(() => {
-    const scrollSpeed = 0.5;
+    const scrollSpeed = 1.2;
 
     const scroll = () => {
       if (scrollRef.current) {

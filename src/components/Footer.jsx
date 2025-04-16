@@ -125,12 +125,12 @@ const Footer = () => {
       </div>
 
       <div className="bg-[linear-gradient(135deg,#366ec3_0%,#53b3eb_100%)] py-[10px] border-t border-black">
-        <div className="container xl:w-[65%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto py-2 lg:px-0 px-5 flex sm:flex-row flex-col justify-between items-center text-white">
-          <p className="mb-2 sm:mb-0 text-[12px] sm:w-[25%] md:w-full">
+        <div className="container xl:w-[65%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto py-2 lg:px-0 px-5 flex sm:flex-row flex-col justify-between md:items-center text-white">
+          <p className="text-[12px] sm:w-[25%] md:w-full flex ">
             © 2025 Convex Book Publishers. <span className="md:flex hidden">All rights reserved</span>
           </p>
 
-          <div className="flex items-center md:flex-row sm:flex-col flex-row space-x-2 text-[13px]">
+          <div className="w-full flex md:flex-row flex-col space-x-2 text-[13px]">
             <a href="/terms" className="hover:underline">
               Terms of Services
             </a>

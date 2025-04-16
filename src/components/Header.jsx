@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
-import Button from "./Button";
-import Form from "./HomePage_Components/Form";
 import HeaderButton from "./HeaderButton";
+import BookCallContact from "./BookCallContact";
+import GetAQuoteForm from "../components/GetQuoteForm"; 
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isBookCallOpen, setIsBookCallOpen] = useState(false);
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false); 
 
   const navItems = [
     { name: "Home" },
@@ -19,12 +20,12 @@ function Header() {
 
   const buttons = [
     { label: "1-800-123-4567", action: null },
-    { label: "Book A Call", action: null },
-    { label: "Get a Quote", action: () => setIsFormOpen(true) },
+    { label: "Book A Call", action: () => setIsBookCallOpen(true) },
+    { label: "Get a Quote", action: () => setIsQuoteOpen(true) }, // 🆕 Button added
   ];
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div className="fixed top-0 left-0 w-full z-[100] bg-white shadow-md"> 
       <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center py-0.5">
           <div className="w-full lg:w-auto flex justify-between items-center">
@@ -78,20 +79,24 @@ function Header() {
         </div>
       </div>
 
-      {isFormOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg max-w-md w-full">
-            <div className="flex justify-end mb-4">
-              <button
-                onClick={() => setIsFormOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ✕
-              </button>
-            </div>
-            <Form text="Let’s Begin The Journey" children="w-full" />
-          </div>
-        </div>
+      {/* Book A Call Modal */}
+      {isBookCallOpen && (
+        <BookCallContact
+          onClose={() => setIsBookCallOpen(false)}
+          onSubmit={(data) => {
+            setIsBookCallOpen(false);
+          }}
+        />
+      )}
+
+     
+      {isQuoteOpen && (
+        <GetAQuoteForm
+          onClose={() => setIsQuoteOpen(false)}
+          onSubmit={(data) => {
+            setIsQuoteOpen(false);
+          }}
+        />
       )}
     </div>
   );

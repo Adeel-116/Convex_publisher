@@ -72,32 +72,14 @@ h6 {
   z-index: 5;
 }
 
-
-.verticalAnimation {
-  width: 0.5px; 
-  height: 0; 
-  background-color: #101828;
-  animation: expandVertical 1s  cubic-bezier(.2,.78,.79,.34) forwards,
-             expandHorizontal 1s cubic-bezier(.54,.27,0,.98) 1s forwards;
-}
-
-@keyframes expandVertical {
-  0% {
-    height: 0; 
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes expandHorizontal {
-  0% {
-    width: 0.5px; 
-  }
-  100% {
-    width: 100%; 
-
-  }
+.bg-image3{
+  width: auto; /* Adjust as needed */
+  height: auto;
+  background-image: url('./assets/banner.webp'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
 }
 
 
