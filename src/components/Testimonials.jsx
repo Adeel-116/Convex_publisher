@@ -12,6 +12,7 @@ function Testimonials() {
         "I am a writer but was struggling to write due to stress. After my recent divorce, I urgently needed to publish my book. That's when I discovered Convex Book Publisher. They perfectly translated my ideas into the exact words I envisioned.",
       name: "Ann Smith",
       role: "Writer",
+      shortName: "AS"
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ function Testimonials() {
         "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Publisher. They were able to help get my ideas into the exact words I was looking for.",
       name: "Ann Smith",
       role: "Writer",
+      shortName: "AS"
     },
     {
       id: 3,
@@ -26,6 +28,7 @@ function Testimonials() {
         "If you need a book cover design for your book, I will suggest Convex Book Publisher. I got the perfect book cover from them.",
       name: "Peter Black",
       role: "Author",
+      shortName: "PB"
     },
     {
       id: 4,
@@ -33,6 +36,7 @@ function Testimonials() {
         "It was tough figuring out the technical aspects of making an audiobook. This is when I found out about Convex Book Publisher. They helped make my book an audiobook.",
       name: "John Black",
       role: "Author",
+      shortName: "JB"
     },
     {
       id: 5,
@@ -40,6 +44,7 @@ function Testimonials() {
         "Convex Book Publisher Writers was recommended to me by my friend. He saw that I was finding it difficult to complete my work. I had the plot but was finding it stressful to make this into a readable book. They were able to help me out.",
       name: "Leena Travis",
       role: "Writer",
+      shortName: "LT"
     },
   ];
 
@@ -54,7 +59,7 @@ function Testimonials() {
   useEffect(() => {
     const interval = setInterval(() => {
       goNext();
-    }, 6000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [slideNumber]);
 
@@ -87,7 +92,7 @@ function Testimonials() {
   };
 
   return (
-    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col sm:py-5">
+    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col py-5 sm:py-5">
       <h2 className="text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold">
         What Our Past Clients Have To Say
       </h2>
@@ -97,7 +102,7 @@ function Testimonials() {
 
       {/* Slides Container */}
       <div
-        className="w-full overflow-x-hidden mt-8 relative"
+        className="w-full overflow-x-hidden py-8 mt-2 relative"
         onMouseDown={handleStart}
         onMouseUp={handleEnd}
         onTouchStart={handleStart}
@@ -107,12 +112,12 @@ function Testimonials() {
           {currentSlides.map((slide) => (
             <div
               key={slide.id}
-              className="relative sm:w-[500px] sm:h-[360px] w-[280px] h-auto rounded-lg shadow-2xl overflow-hidden bg-white"
+              className="relative sm:w-[500px] sm:h-[370px] w-[280px] h-auto shadow-lg overflow-hidden bg-white"
             >
               <div className="background-testimonial-card mt-3"></div>
               <div className="sm:px-10 sm:py-8 px-6 py-7 h-full flex flex-col gap-y-6 overflow-hidden bg-opacity-90">
-                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-red-400 mx-auto">
-                  <p className="text-4xl text-blue-600 font-semibold">AS</p>
+                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-white shadow-xl mx-auto">
+                  <p className="text-4xl text-[#3524c4] font-semibold">{slide.shortName}</p>
                 </div>
                 <div className="text-gray-700 text-[16px] text-center sm:overflow-y-auto h-auto sm:max-h-[200px]">
                   "{slide.content}"
@@ -129,10 +134,10 @@ function Testimonials() {
         {/* Navigation Buttons */}
         <div className="hidden md:flex flex-row justify-center mt-5 gap-x-5">
           <div className="flex items-center justify-center transform rotate-180 cursor-pointer" onClick={goPrev}>
-            <IoChevronForwardCircleOutline size={55} color="#3a45f6" />
+            <IoChevronForwardCircleOutline size={55} color="#3524c4" />
           </div>
           <div className="flex items-center justify-center cursor-pointer" onClick={goNext}>
-            <IoChevronForwardCircleOutline size={55} color="#3a45f6" />
+            <IoChevronForwardCircleOutline size={55} color="#3524c4" />
           </div>
         </div>
       </div>

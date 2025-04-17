@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  background-color: white;
+  box-sizing: border-box;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -22,11 +26,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #448FD6; 
+  background: #007BFF; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4e27e8c0; 
+  background: #3A45F6; 
 }
 
 

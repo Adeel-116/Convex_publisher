@@ -20,7 +20,7 @@ function BookCallContact({ onSubmit, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/40 ">
+    <div className="fixed top-0 left-0 inset-0 flex items-center justify-center  bg-black/40 ">
       <div className="bg-white w-full max-w-xl mx-4 sm:px-15 px-5 py-8 sm:py-13 rounded-3xl relative shadow-2xl border-b-[7px] border-blue-600">
         {/* Close Button */}
         <button

@@ -6,7 +6,9 @@ import seal_footer from "../assets/seals-footer.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3C7BCB] h-auto">
+      <footer className=" h-auto"
+      style={{ background: 'linear-gradient(90deg, #3524c4, #3d17b3, #2834d6)' }}
+    >
       <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 py-10">
         <div className=" flex flex-col gap-y-4 lg:px-0 px-5">
           <div className="text-center flex w-full">
@@ -124,7 +126,9 @@ const Footer = () => {
 
       </div>
 
-      <div className="bg-[linear-gradient(135deg,#366ec3_0%,#53b3eb_100%)] py-[10px] border-t border-black">
+      <div className=" py-[10px] border-t border-black"
+        style={{ background: 'linear-gradient(270deg, #2834d6, #3d17b3, #3524c4)' }}
+      >
         <div className="container xl:w-[65%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto py-2 lg:px-0 px-5 flex sm:flex-row flex-col justify-between md:items-center text-white">
           <p className="text-[12px] sm:w-[25%] md:w-full flex ">
             © 2025 Convex Book Publishers. <span className="md:flex hidden">All rights reserved</span>
@@ -144,7 +148,7 @@ const Footer = () => {
 
       <div className="w-full bg-black flex flex-col">
         <div className="container xl:w-[65%] lg:w-[90%] md:w-[95%] sm:w-[80%] lg:px-0 px-5 w-[90%] mx-auto py-4 flex flex-col text-white">
-          <p className="text-[13.5px] md:text-start text-center font-medium text-[#53b3eb]">Disclaimer:</p>
+          <p className="text-[13.5px] md:text-start text-center font-medium text-[#5025e6]">Disclaimer:</p>
           <p className="text-[11px] md:text-start text-center">
             Once delivered, the services offered by Convex Book Publisher
             become the clients' property. Once your work is accepted by a

@@ -71,7 +71,7 @@ const PublishingProcess = () => {
                 <div className="hidden lg:flex w-4/13 md:w-auto items-center justify-center order-2 md:order-none my-4 md:my-0">
                   <div className="relative flex items-center justify-center w-10 h-10 md:w-15 lg:w-20 lg:h-20 md:h-15">
                     <div className="absolute w-full h-full bg-white border-4 border-[#3a45f6] rounded-full" />
-                    <p className="text-2xl md:text-3xl font-bold text-[#3a45f6] relative z-10">
+                    <p className="text-2xl md:text-3xl font-bold text-[#3a45f6]  relative ">
                       0{index + 1}
                     </p>
                   </div>

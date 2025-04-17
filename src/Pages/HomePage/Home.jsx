@@ -46,7 +46,7 @@ function HomePage() {
           <LetsBeginCard  onBookQuote={() => setIsFormOpen(true)}/>
         </section>
 
-        <div className="bg-[#f9fafb]">
+        <div className="bg-[#FAFBFD]">
           <section className="py-10">
             <Testimonials />
           </section>
