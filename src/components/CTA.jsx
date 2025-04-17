@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Button from "../components/Button"
 import Form from './HomePage_Components/Form';
 
-function CTA() {
+function CTA({onOpenQuote}) {
     const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <div className="bg-white py-15 px-4 sm:px-6 lg:px-8">
@@ -16,31 +16,13 @@ function CTA() {
       </h2>
 
       <div className='flex flex-wrap gap-3 justify-center'>
-        <Button text="Get A Quote" onClick={()=>setIsFormOpen(true)}/>
+        <Button text="Get A Quote" onClick={onOpenQuote}/>
         <Button text="Live Chat"/>
         <Button text="+1 302-518-4405"/>
       </div>
     </div>
 
 
-    {isFormOpen && (
-       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-       <div className="bg-white p-6 rounded-lg max-w-md w-full">
-      
-      <div className="flex justify-end mb-4">
-        <button 
-          onClick={() => setIsFormOpen(false)}
-          className="text-gray-500 hover:text-gray-700"
-        >
-          ✕
-        </button>
-      </div>
-
-        <Form text="Let’s Begin The Journey"  children="w-full"/>
-
-    </div>
-  </div>
-)}
 
   </div>
   )

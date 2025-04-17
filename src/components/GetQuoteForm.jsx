@@ -29,11 +29,10 @@ const GetAQuoteForm = ({ onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        // Add your submission logic here
     };
 
     return (
-        <div className="fixed inset-0 z-[9999] bg-[#f6f9fc] flex flex-col items-center overflow-y-auto py-8">
+        <div className="fixed inset-0 z-30 bg-[#f6f9fc] flex flex-col items-center">
 
             {/* Header with Logo and Close Button */}
             <div className="w-[90%] max-w-5xl flex items-center justify-between py-5">
@@ -81,7 +80,7 @@ const GetAQuoteForm = ({ onClose }) => {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={handleChange}
+                        onChange={handlePhoneChange}
                         extraClases="py-2 px-3 bg-white"
                     />
                 </div>
@@ -94,16 +93,17 @@ const GetAQuoteForm = ({ onClose }) => {
                     <PhoneInput
                         country={'us'}
                         value={formData.phone}
-                        onChange={handlePhoneChange}
+                        onChange={handlePhoneChange} // ✅ FIXED: used the correct handler
                         inputStyle={{
                             width: '100%',
                             height: '40px',
                             fontSize: '14px',
-                            paddingLeft: '48px',
-                            borderColor: '#d1d5db',
-                            backgroundColor: '#ffffff',
+                            color: 'black', // ✅ FIXED: text color
+                            backgroundColor: 'white', // Optional for contrast
+                            borderColor: '#ccc',
                         }}
-                        containerClass="border border-gray-300 rounded"
+                        buttonStyle={{ borderRight: '1px solid #ccc', color: 'black' }}
+                        specialLabel=""
                     />
                 </div>
 

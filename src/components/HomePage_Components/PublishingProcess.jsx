@@ -39,7 +39,7 @@ const PublishingProcess = () => {
 
       <div className="relative">
         
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full bg-blue-300 w-1" />
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full bg-[#3a45f6] w-1" />
 
         <div className="space-y-12 md:space-y-0">
           {steps.map((step, index) => {
@@ -61,7 +61,7 @@ const PublishingProcess = () => {
                       {step.description}
                     </p>
                     {/* Mobile-only number */}
-                    <p className="lg:hidden text-2xl text-blue-600 font-bold mt-2">
+                    <p className="lg:hidden text-2xl text-[#3a45f6] font-bold mt-2">
                       0{index + 1}
                     </p>
                   </div>
@@ -70,8 +70,8 @@ const PublishingProcess = () => {
                 {/* Number Circle - Hidden on mobile */}
                 <div className="hidden lg:flex w-4/13 md:w-auto items-center justify-center order-2 md:order-none my-4 md:my-0">
                   <div className="relative flex items-center justify-center w-10 h-10 md:w-15 lg:w-20 lg:h-20 md:h-15">
-                    <div className="absolute w-full h-full bg-white border-4 border-blue-400 rounded-full" />
-                    <p className="text-2xl md:text-3xl font-bold text-blue-600 relative z-10">
+                    <div className="absolute w-full h-full bg-white border-4 border-[#3a45f6] rounded-full" />
+                    <p className="text-2xl md:text-3xl font-bold text-[#3a45f6] relative z-10">
                       0{index + 1}
                     </p>
                   </div>

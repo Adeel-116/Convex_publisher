@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import quote from '../assets/quote.png';
+import React, { useEffect, useState, useRef } from 'react';
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 
 function Testimonials() {
   const [slideNumber, setSlideNumber] = useState(0);
+  const startX = useRef(null);
 
   const slideArray = [
     {
@@ -44,65 +44,96 @@ function Testimonials() {
   ];
 
   const goNext = () => {
-    setSlideNumber((prev) => (prev === slideArray.length - 1 ? 0 : prev + 1));
+    setSlideNumber((prev) => (prev + 2) % slideArray.length);
   };
 
   const goPrev = () => {
-    setSlideNumber((prev) => (prev === 0 ? slideArray.length - 1 : prev - 1));
+    setSlideNumber((prev) => (prev - 2 + slideArray.length) % slideArray.length);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       goNext();
-    }, 5000); // Adjust timing if needed
-
+    }, 6000);
     return () => clearInterval(interval);
   }, [slideNumber]);
 
+  const currentSlides = [
+    slideArray[slideNumber],
+    slideArray[(slideNumber + 1) % slideArray.length],
+  ];
+
+  // Drag Handlers
+  const handleStart = (e) => {
+    startX.current = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+  };
+
+  const handleEnd = (e) => {
+    if (startX.current === null) return;
+
+    const endX = e.type === 'touchend'
+      ? e.changedTouches[0].clientX
+      : e.clientX;
+
+    const diff = endX - startX.current;
+
+    if (diff > 50) {
+      goPrev();
+    } else if (diff < -50) {
+      goNext();
+    }
+
+    startX.current = null;
+  };
+
   return (
-    <div className='w-full flex items-center justify-center flex-col sm:p-5'>
-      <h2 className='text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold'>What Our Past Clients Have To Say</h2>
-      <p className='text-black mt-3 md:w-[60%] w-full text-center'>
+    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col sm:py-5">
+      <h2 className="text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold">
+        What Our Past Clients Have To Say
+      </h2>
+      <p className="text-black mt-3 md:w-[60%] w-full text-center">
         We have completed many book projects and have made clientele happy. Find out what they think of us.
       </p>
 
       {/* Slides Container */}
-      <div className='md:w-[60%] w-[90%] overflow-hidden relative'>
-        <div
-          className='flex transition-transform duration-500 ease-in-out'
-          style={{ transform: `translateX(-${slideNumber * 100}%)` }}
-        >
-          {slideArray.map((slide, index) => (
+      <div
+        className="w-full overflow-x-hidden mt-8 relative"
+        onMouseDown={handleStart}
+        onMouseUp={handleEnd}
+        onTouchStart={handleStart}
+        onTouchEnd={handleEnd}
+      >
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-6 px-4 transition-all duration-500">
+          {currentSlides.map((slide) => (
             <div
               key={slide.id}
-              className='w-full flex-shrink-0 flex flex-col items-center sm:gap-y-10 gap-y-7'
+              className="relative sm:w-[500px] sm:h-[360px] w-[280px] h-auto rounded-lg shadow-2xl overflow-hidden bg-white"
             >
-              <div className='image sm:w-[90px] w-[60px] mt-3'>
-                <img src={quote} alt="Quote" />
-              </div>
-
-              <div>
-                <p className='sm:text-[20px] text-[16px] italic sm:leading-[1.6] text-black text-center'>
-                  {slide.content}
-                </p>
-              </div>
-
-              <div className='text-center flex flex-col'>
-                <span className='text-blue-300 font-bold'>{slide.name}</span>
-                <span className='text-black'>{slide.role}</span>
+              <div className="background-testimonial-card mt-3"></div>
+              <div className="sm:px-10 sm:py-8 px-6 py-7 h-full flex flex-col gap-y-6 overflow-hidden bg-opacity-90">
+                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-red-400 mx-auto">
+                  <p className="text-4xl text-blue-600 font-semibold">AS</p>
+                </div>
+                <div className="text-gray-700 text-[16px] text-center sm:overflow-y-auto h-auto sm:max-h-[200px]">
+                  "{slide.content}"
+                </div>
+                <div className="text-center mt-auto">
+                  <p className="font-semibold text-[#3524c4] text-[18px]">{slide.name}</p>
+                  <p className="text-sm text-gray-500 text-[16px]">{slide.role}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Navigation Buttons */}
-      <div className='flex flex-row mt-5 gap-x-5'>
-        <div className='flex items-center justify-center transform rotate-180 cursor-pointer' onClick={goPrev}>
-          <IoChevronForwardCircleOutline size={55} color='#386AFB' />
-        </div>
-        <div className='flex items-center justify-center cursor-pointer' onClick={goNext}>
-          <IoChevronForwardCircleOutline size={55} color='#386AFB' />
+        {/* Navigation Buttons */}
+        <div className="hidden md:flex flex-row justify-center mt-5 gap-x-5">
+          <div className="flex items-center justify-center transform rotate-180 cursor-pointer" onClick={goPrev}>
+            <IoChevronForwardCircleOutline size={55} color="#3a45f6" />
+          </div>
+          <div className="flex items-center justify-center cursor-pointer" onClick={goNext}>
+            <IoChevronForwardCircleOutline size={55} color="#3a45f6" />
+          </div>
         </div>
       </div>
     </div>

@@ -7,13 +7,13 @@ const SelectBox = ({ label, options = [], name, value, onChange, extraClases}) =
       onChange={onChange}
 
 
-      className={`text-[13px] ${extraClases} font-medium block w-full border-2 text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black text-sm transition-colors duration-200 `}
+      className={`text-[13px] ${extraClases} w-full border-2 text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black transition-colors duration-200`}
     >
       <option
         value=""
         disabled
         hidden
-        className="text-gray-400"
+        className="text-gray-400 font-bold"
       >
         {label || ""}
       </option>

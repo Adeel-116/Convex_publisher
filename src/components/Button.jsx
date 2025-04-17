@@ -11,10 +11,6 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
         px-3 py-3
         font-medium 
         text-white 
-        bg-gradient-to-r 
-        from-indigo-500 
-        to-blue-500 
-        ${isHovered ? 'from-indigo-600 to-blue-600 scale-[1.02] shadow-lg' : ''}
         transition-all 
         duration-300 
         transform 
@@ -27,6 +23,7 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
+      style={{background: "#3a45f6"}}
     >
       <div className={`
         absolute 

@@ -8,13 +8,13 @@ import img5 from "../../assets/top-seo-badge-home.webp";
 import img2 from "../../assets/top-markeintg-agencies.png";
 import img1 from "../../assets/clutch.png";
 
-function HeroSection() {
+function HeroSection({onOpenQuote}) {
   const reviewImages = [img1, img2, img3, img4, img5];
 
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <>
-      <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] h-auto flex md:flex-nowrap flex-wrap gap-y-3">
+      <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] relative  h-auto flex md:flex-nowrap flex-wrap gap-y-3">
         <div className="md:w-[60%] w-full flex flex-col gap-y-2 justify-center">
           <h6>Expert Book Publishing Services</h6>
           <h1 className=" w-full">
@@ -30,7 +30,7 @@ function HeroSection() {
 
           <div className="button flex space-x-2 mt-3 flex-wrap gap-y-3">
             <Button text="Live Chat" />
-            <Button text="Get A Quote" onClick={() => setIsFormOpen(true)} />
+            <Button text="Get A Quote" onClick={onOpenQuote} />
             <Button text="+1302-518-4405" />
           </div>
 
@@ -62,7 +62,19 @@ function HeroSection() {
             />
           </div>
         </div>
+
+
+        {isFormOpen && (
+        <GetAQuoteForm
+          onClose={() => setIsFormOpen(false)}
+          onSubmit={(data) => {
+            setIsFormOpen(false);
+          }}
+        />
+      )}
       </div>
+
+      
       
     </>
   );
