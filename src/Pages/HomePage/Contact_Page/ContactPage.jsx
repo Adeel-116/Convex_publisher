@@ -115,7 +115,7 @@ function ContactPage() {
                             info@premiumbookpublishers.com
                         </p>
 
-                        <div className="w-full h-auto rounded-xl bg-[#F7F9FC] py-20 px-5">
+                        <div className="w-full h-auto rounded-xl bg-[#F7F9FC] sm:py-20 py-10 px-5">
 
                             <form action="" className="w-full flex flex-col gap-y-5">
 
@@ -123,7 +123,7 @@ function ContactPage() {
                                     We Want To Hear From you
                                 </h2>
 
-                                <div className="w-full flex gap-x-8">
+                                <div className="w-full flex sm:flex-row flex-col gap-y-5 gap-x-8">
                                     <div className="flex-1">
                                         <label
                                             htmlFor="name"
@@ -146,13 +146,13 @@ function ContactPage() {
                                             htmlFor="name"
                                             className="block text-sm font-medium text-gray-700 mb-1"
                                         >
-                                            Full Name
+                                            Email
                                         </label>
                                         <InputField
-                                            label="Full Name"
+                                            label="Email"
                                             name="name"
                                             required
-                                            value={formData.name}
+                                            value={formData.email}
                                             onChange={handleChange}
                                             extraClases="py-2 px-3 bg-white"
                                         />

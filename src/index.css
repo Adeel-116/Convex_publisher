@@ -28,7 +28,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #007BFF; 
+  background: linear-gradient(to bottom right, #4E58F7, #53b3eb); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
