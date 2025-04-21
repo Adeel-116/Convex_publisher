@@ -23,22 +23,22 @@ function HeaderButton({ btnText, onClick, extraClases = "", bgColor = "" }) {
       }}
       onMouseEnter={(e) => {
         if (hasBackground) {
-          // Remove background on hover
+          
           e.currentTarget.style.backgroundColor = 'transparent';
           e.currentTarget.style.color = bgColor;
         } else {
-          // Add background and make text white
+        
           e.currentTarget.style.backgroundColor = bgColor || "#007bff";
           e.currentTarget.style.color = '#fff';
         }
       }}
       onMouseLeave={(e) => {
         if (hasBackground) {
-          // Reapply background after hover
+        
           e.currentTarget.style.backgroundColor = bgColor;
           e.currentTarget.style.color = '#fff';
         } else {
-          // Remove background and restore original color
+          
           e.currentTarget.style.backgroundColor = 'transparent';
           e.currentTarget.style.color = bgColor || "#007bff";
         }

@@ -120,7 +120,7 @@ const Footer = () => {
               <p>About Us</p>
               <p>Testimonials</p>
               <NavLink to="/contact-us" className="hover:underline"><p>Contact Us</p></NavLink>
-              <p className="mt-2">FAQs</p>
+              <p className="mt-2">Privacy Policy</p>
             </div>
           </div>
         </div>

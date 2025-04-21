@@ -51,9 +51,8 @@ h6 {
 }
 
 
-
 .bg-image {
-  width: 194px; /* Adjust as needed */
+  width: 194px; 
   height: auto;
   background-image: url('./assets/cup.png');
   background-repeat: no-repeat;
@@ -63,7 +62,7 @@ h6 {
 }
 
 .bg-image2{
-  width: 95px; /* Adjust as needed */
+  width: 95px;
   height: auto;
   background-image: url('./assets/leave.png'); 
   background-repeat: no-repeat;
@@ -73,7 +72,7 @@ h6 {
 }
 
 .bg-image3{
-  width: auto; /* Adjust as needed */
+  width: auto; 
   height: auto;
   background-image: url('./assets/banner.webp'); 
   background-repeat: no-repeat;
@@ -85,7 +84,7 @@ h6 {
 .background-testimonial-card {
   position: absolute;
   inset: 0;
-  background-image: url('/src/assets/quoteimg.webp'); /* 🔁 Update the path */
+  background-image: url('/src/assets/quoteimg.webp'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

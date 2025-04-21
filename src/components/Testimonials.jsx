@@ -9,7 +9,7 @@ function Testimonials() {
     {
       id: 1,
       content:
-        "I am a writer but was struggling to write due to stress. After my recent divorce, I urgently needed to publish my book. That's when I discovered Convex Book Publisher. They perfectly translated my ideas into the exact words I envisioned.",
+        "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Publisher. They were able to help get my ideas into the exact words I was looking for.",
       name: "Ann Smith",
       role: "Writer",
       shortName: "AS"
@@ -17,21 +17,30 @@ function Testimonials() {
     {
       id: 2,
       content:
-        "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Publisher. They were able to help get my ideas into the exact words I was looking for.",
-      name: "Ann Smith",
-      role: "Writer",
-      shortName: "AS"
-    },
-    {
-      id: 3,
-      content:
         "If you need a book cover design for your book, I will suggest Convex Book Publisher. I got the perfect book cover from them.",
       name: "Peter Black",
       role: "Author",
       shortName: "PB"
     },
+
+    {
+      id: 3,
+      content:
+        "It was difficult designing a book cover which matched the message of my book. I tried but was unsuccessful before I came across Convex Book Publishers. They helped design a good cover for my book.", 
+      name: "Amy Spenser",
+      role: "Writer",
+      shortName: "AS"
+    },
     {
       id: 4,
+      content:
+       "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Writers. They were able to help get my ideas into a complete manuscript.", 
+      name: "Morris Chris",
+      role: "Author",
+      shortName: "MC"
+    },
+    {
+      id: 5,
       content:
         "It was tough figuring out the technical aspects of making an audiobook. This is when I found out about Convex Book Publisher. They helped make my book an audiobook.",
       name: "John Black",
@@ -39,7 +48,7 @@ function Testimonials() {
       shortName: "JB"
     },
     {
-      id: 5,
+      id: 6,
       content:
         "Convex Book Publisher Writers was recommended to me by my friend. He saw that I was finding it difficult to complete my work. I had the plot but was finding it stressful to make this into a readable book. They were able to help me out.",
       name: "Leena Travis",
@@ -68,7 +77,7 @@ function Testimonials() {
     slideArray[(slideNumber + 1) % slideArray.length],
   ];
 
-  // Drag Handlers
+
   const handleStart = (e) => {
     startX.current = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
   };
@@ -100,7 +109,7 @@ function Testimonials() {
         We have completed many book projects and have made clientele happy. Find out what they think of us.
       </p>
 
-      {/* Slides Container */}
+      
       <div
         className="w-full overflow-x-hidden py-8 mt-2 relative"
         onMouseDown={handleStart}
@@ -112,7 +121,7 @@ function Testimonials() {
           {currentSlides.map((slide) => (
             <div
               key={slide.id}
-              className="relative sm:w-[500px] sm:h-[370px] w-[280px] h-auto shadow-lg overflow-hidden bg-white"
+              className="relative sm:w-[500px] sm:h-[370px] w-[280px] h-auto shadow-lg overflow-hidden"
             >
               <div className="background-testimonial-card mt-3"></div>
               <div className="sm:px-10 sm:py-8 px-6 py-7 h-full flex flex-col gap-y-6 overflow-hidden bg-opacity-90">

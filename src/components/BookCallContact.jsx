@@ -16,7 +16,7 @@ function BookCallContact({ onSubmit, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit?.(formData);
+    console.log(formData)
   };
 
   return (

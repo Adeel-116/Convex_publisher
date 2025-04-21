@@ -8,14 +8,6 @@ import WatsappCTA from '../../components/HomePage_Components/WatsappCTA';
 import FloatingQuoteBox from '../../components/HomePage_Components/FloatingQuoteBox';
 
 function Term_Conditions() {
-   const [formData, setFormData] = useState({
-            name: "",
-            email: "",
-            phone: "",
-            service: "",
-            budget: "",
-            comments: "",
-        });
   
      const [showButtons, setShowButton] = useState(false);
         useEffect(() => {
@@ -28,16 +20,6 @@ function Term_Conditions() {
             window.addEventListener("scroll", handleScroll);
             return () => window.removeEventListener("scroll", handleScroll);
           }, []);
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-  
-  const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(formData);
-  };
 
 
   return (
@@ -119,9 +101,6 @@ function Term_Conditions() {
             {showButtons && (
                 <FloatingQuoteBox
                     show={showButtons}
-                    formData={formData}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit}
                 />
             )}
 

@@ -9,15 +9,6 @@ import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuote
 
 function Privacy_Policy() {
 
-   const [formData, setFormData] = useState({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          budget: "",
-          comments: "",
-      });
-
    const [showButtons, setShowButton] = useState(false);
       useEffect(() => {
           const handleScroll = () => {
@@ -29,17 +20,6 @@ function Privacy_Policy() {
           window.addEventListener("scroll", handleScroll);
           return () => window.removeEventListener("scroll", handleScroll);
         }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-};
-
-const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-};
-
 
   return (
     <>
@@ -205,9 +185,6 @@ const handleSubmit = (e) => {
             {showButtons && (
                 <FloatingQuoteBox
                     show={showButtons}
-                    formData={formData}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit}
                 />
             )}
     </>

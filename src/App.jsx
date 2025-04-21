@@ -1,6 +1,4 @@
 import './App.css'
-import BookCallContact from './components/BookCallContact'
-import GetAQuoteForm from './components/GetQuoteForm'
 import ContactPage from './Pages/HomePage/Contact_Page/ContactPage'
 import HomePage from './Pages/HomePage/Home'
 import Privacy_Policy from './Pages/HomePage/Privacy_Policy'

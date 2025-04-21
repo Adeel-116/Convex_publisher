@@ -64,24 +64,16 @@ function ContactPage() {
 
         ]
 
-
-
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleToggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-
-
-
-
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
-        service: "",
-        budget: "",
         comments: "",
     });
 
@@ -90,9 +82,6 @@ function ContactPage() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handlePhoneChange = (value) => {
-        setFormData((prev) => ({ ...prev, phone: value }));
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -117,7 +106,7 @@ function ContactPage() {
 
                         <div className="w-full h-auto rounded-xl bg-[#F7F9FC] sm:py-20 py-10 px-5">
 
-                            <form action="" className="w-full flex flex-col gap-y-5">
+                            <form action="" onSubmit={handleSubmit} className="w-full flex flex-col gap-y-5">
 
                                 <h2 className="text-[#323637] font-light text-[30px]">
                                     We Want To Hear From you
@@ -150,7 +139,7 @@ function ContactPage() {
                                         </label>
                                         <InputField
                                             label="Email"
-                                            name="name"
+                                            name="email"
                                             required
                                             value={formData.email}
                                             onChange={handleChange}
@@ -197,7 +186,7 @@ function ContactPage() {
                                 </div>
 
                                 <div className="col-span-1 md:col-span-2 flex justify-start">
-                                    <Button text="Submit" extraClass="px-12 py-4" />
+                                    <Button text="submit" extraClass="px-12 py-4" />
                                 </div>
                             </form>
                         </div>
@@ -257,9 +246,6 @@ function ContactPage() {
             {showButtons && (
                 <FloatingQuoteBox
                     show={showButtons}
-                    formData={formData}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit}
                 />
             )}
         </>

@@ -24,7 +24,6 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    
   };
 
   return (

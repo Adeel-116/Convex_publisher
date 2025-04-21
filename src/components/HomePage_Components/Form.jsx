@@ -1,19 +1,16 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import Button from "../Button";
 import InputField from "../InputField";
 
 function Form({ text, parapgraph, children }) {
   const formRef = useRef();
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
 
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
     user_phone: "",
-    service: "",
-    budget: "",
     message: "",
   });
 
@@ -28,35 +25,7 @@ function Form({ text, parapgraph, children }) {
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
-
-    emailjs
-      .sendForm(
-        "service_fzmgsy8",
-        "template_0gw3qwc",
-        formRef.current,
-        "4oe_HnQK8v-wi_H9m"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSubmitted(true);
-          setIsSending(false);
-
-          formRef.current.reset();
-          setFormData({
-            user_name: "",
-            user_email: "",
-            user_phone: "",
-            service: "",
-            budget: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setIsSending(false);
-        }
-      );
+    console.log(formData)
   };
 
   return (

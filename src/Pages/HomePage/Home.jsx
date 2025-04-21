@@ -95,16 +95,11 @@ function HomePage() {
         </section>
       </div>
 
-   
       <WatsappCTA />
-
  
       {showButtons && (
         <FloatingQuoteBox
           show={showButtons}
-          formData={formData}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
         />
       )}
 
