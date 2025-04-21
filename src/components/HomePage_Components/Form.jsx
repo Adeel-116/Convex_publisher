@@ -3,15 +3,11 @@ import emailjs from "@emailjs/browser";
 import Button from "../Button";
 import InputField from "../InputField";
 import SelectBox from "../SelectBox";
-import PopUp from "../PopUp";
 
-function Form({ text, parapgraph, children,  }) {
+function Form({ text, parapgraph, children }) {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState("");
-  const [popupType, setPopupType] = useState(""); 
-  const [isSending, setIsSending] = useState(false); 
+  const [isSending, setIsSending] = useState(false);
 
   const [formData, setFormData] = useState({
     user_name: "",
@@ -32,7 +28,7 @@ function Form({ text, parapgraph, children,  }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setIsSending(true); 
+    setIsSending(true);
 
     emailjs
       .sendForm(
@@ -44,9 +40,6 @@ function Form({ text, parapgraph, children,  }) {
       .then(
         (result) => {
           console.log(result.text);
-          setPopupMessage("Thank you! We'll get back to you soon.");
-          setPopupType("success");
-          setShowPopup(true);
           setSubmitted(true);
           setIsSending(false);
 
@@ -59,28 +52,17 @@ function Form({ text, parapgraph, children,  }) {
             budget: "",
             message: "",
           });
-
-          setTimeout(() => {
-            setShowPopup(false);
-          }, 3000);
         },
         (error) => {
           console.log(error.text);
-          setPopupMessage("Something went wrong. Please try again.");
-          setPopupType("error");
-          setShowPopup(true);
           setIsSending(false);
-
-          setTimeout(() => {
-            setShowPopup(false);
-          }, 3000);
         }
       );
   };
 
   return (
     <div className={`${children} w-auto rounded-lg p-7 md:px-7 sm:px-10`}>
-      <h3 className="font-bold text-gray-600 text-center">{text}</h3>
+      <h3 className="font-bold text-gray-600 text-[25px] text-center">{text}</h3>
 
       <form ref={formRef} onSubmit={sendEmail} className="space-y-6 mt-3">
         <div className="grid grid-cols-1 gap-6">
@@ -118,7 +100,7 @@ function Form({ text, parapgraph, children,  }) {
               onChange={handleChange}
               rows="4"
               placeholder="Enter a brief description"
-              className="block w-full rounded-md border text-black border-gray-300 shadow-sm focus:border-[#00c0ff] focus:ring-[#00c0ff] px-3 py-2 text-sm"
+              className="block w-full border-2 text-black border-gray-300 shadow-sm focus:border-[#00c0ff] focus:ring-[#00c0ff] px-3 py-2 text-sm"
             ></textarea>
           </div>
         </div>
@@ -132,15 +114,6 @@ function Form({ text, parapgraph, children,  }) {
           />
         </div>
       </form>
-
-      {/* ✅ PopUp rendered only when needed */}
-      {showPopup && (
-        <PopUp
-          message={popupMessage}
-          type={popupType}
-          onClose={() => setShowPopup(false)}
-        />
-      )}
     </div>
   );
 }

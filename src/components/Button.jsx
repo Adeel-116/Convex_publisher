@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function SimpleButton({ text, onClick, extraClass = "" }) {
+export default function Button({ text, onClick, extraClass = "" }) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -17,6 +17,7 @@ export default function SimpleButton({ text, onClick, extraClass = "" }) {
         hover:scale-[1.02]
         shadow-md 
         hover:shadow-lg
+        hover:cursor-pointer
         group
         ${extraClass}
       `}

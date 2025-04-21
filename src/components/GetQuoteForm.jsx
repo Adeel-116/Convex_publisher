@@ -80,7 +80,7 @@ const GetAQuoteForm = ({ onClose }) => {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={handlePhoneChange}
+                        onChange={handleChange}
                         extraClases="py-2 px-3 bg-white"
                     />
                 </div>
@@ -93,13 +93,13 @@ const GetAQuoteForm = ({ onClose }) => {
                     <PhoneInput
                         country={'us'}
                         value={formData.phone}
-                        onChange={handlePhoneChange} // ✅ FIXED: used the correct handler
+                        onChange={handlePhoneChange}
                         inputStyle={{
                             width: '100%',
                             height: '40px',
                             fontSize: '14px',
-                            color: 'black', // ✅ FIXED: text color
-                            backgroundColor: 'white', // Optional for contrast
+                            color: 'black',
+                            backgroundColor: 'white',
                             borderColor: '#ccc',
                         }}
                         buttonStyle={{ borderRight: '1px solid #ccc', color: 'black' }}
@@ -174,14 +174,14 @@ const GetAQuoteForm = ({ onClose }) => {
                         required
                         value={formData.comments}
                         onChange={handleChange}
-                        className="text-sm font-medium w-full py-2 px-3 border-2 bg-white text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black transition-colors duration-200"
+                        className="text-sm font-medium w-full py-2 px-3 border-2 text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black transition-colors duration-200"
                         rows={5}
                     />
                 </div>
 
                 {/* Submit */}
                 <div className="col-span-1 md:col-span-2 flex justify-start">
-                    <Button text="Submit" />
+                    <Button text="Submit" extraClass='w-[130px]' />
                 </div>
             </form>
         </div>

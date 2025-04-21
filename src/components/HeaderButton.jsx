@@ -1,7 +1,7 @@
 import React from 'react';
 
 function HeaderButton({ btnText, onClick, extraClases = "", bgColor = "" }) {
-  const hasBackground = !!bgColor; // true if bgColor is provided
+  const hasBackground = !!bgColor; 
 
   return (
     <button
@@ -13,7 +13,7 @@ function HeaderButton({ btnText, onClick, extraClases = "", bgColor = "" }) {
         text-[#007bff]
         transition-all duration-300 ease-in-out
         cursor-pointer 
-        border-2 rounded-[5px]
+        border-2 
         ${extraClases}
       `}
       style={{

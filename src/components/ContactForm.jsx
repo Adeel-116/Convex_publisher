@@ -34,7 +34,7 @@ function ContactForm() {
 
       <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] mx-auto sm:px-20 md:py-10 py-5 md:w-[95%] sm:w-[80%] w-[90%]">
         <div className="md:px-30 px-5">
-          <h2 class="text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold">Lets Begin the Journey</h2>
+          <h2 className="text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold">Lets Begin the Journey</h2>
           <p className="text-center text-[#666666] mt-3 md:text-[16px] text-[14px]">
             Call us <span className="text-[#3524c4] font-semibold">+1 302-518-4405 </span>or use the form below to start a
             conversation and show you how we can help!

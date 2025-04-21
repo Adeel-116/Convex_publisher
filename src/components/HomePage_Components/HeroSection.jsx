@@ -28,7 +28,7 @@ function HeroSection({onOpenQuote}) {
             strategy for new writers.
           </p>
 
-          <div className="button flex space-x-2 mt-3 flex-wrap gap-y-3">
+          <div className="button flex space-x-4 mt-3 flex-wrap gap-y-3">
             <Button text="Live Chat" />
             <Button text="Get A Quote" onClick={onOpenQuote} />
             <Button text="+1302-518-4405" />
