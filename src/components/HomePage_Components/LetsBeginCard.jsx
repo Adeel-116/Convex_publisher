@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 import Button from "../Button";
 import BookImage  from "../../assets/books.webp"
-import Form from "./Form";
+
 
 const LetsBeginCard = ({onBookQuote}) => {
 
@@ -26,7 +26,9 @@ const LetsBeginCard = ({onBookQuote}) => {
             <div className="flex flex-wrap gap-3">
               <Button text="Get A Quote"  onClick={onBookQuote}/>
               <Button text="Live Chat" />
-              <Button text="+1 302-518-4405" />
+               <a href="tel:+13025184405">
+                  <Button text="+1302-518-4405" />
+                </a>
             </div>
           </div>
         </div>

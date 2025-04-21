@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "../Button";
 import InputField from "../InputField";
-import SelectBox from "../SelectBox";
 
 function Form({ text, parapgraph, children }) {
   const formRef = useRef();

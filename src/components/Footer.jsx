@@ -1,8 +1,8 @@
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaPinterest, FaTiktok, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-import seal_footer from "../assets/seals-footer.png";
+import seal_footer from "../assets/seals-footer.webp";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {

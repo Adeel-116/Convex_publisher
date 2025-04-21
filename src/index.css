@@ -15,6 +15,8 @@
 body{
   background-color: white;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -37,9 +39,7 @@ body{
 h1 {
   @apply 2xl:text-5xl xl:text-[50px] lg:text-5xl text-3xl font-bold;
 }
-/* h3 {
-  @apply 2xl:text-2xl lg:text-2xl md:text-lg text-[20px];
-} */
+
 h4 {
   @apply xl:text-lg md:text-lg;
 }

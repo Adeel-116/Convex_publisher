@@ -8,13 +8,14 @@ import img4 from "../assets/forbes.svg";
 import img5 from "../assets/google-book.svg";
 import img6 from "../assets/ingram.svg";
 import img7 from "../assets/random-house.svg";
+import img8 from "../assets/wikipedia-logo.webp"
 
-const images = [img1, img2, img3, img4, img5, img6, img7];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 
 function Slider() {
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
-  const speed = 1.2;
+  const speed = 1;
 
   const startScrolling = () => {
     const scroll = () => {
@@ -30,7 +31,7 @@ function Slider() {
       animationRef.current = requestAnimationFrame(scroll);
     };
 
-    scroll(); // Start the scroll loop
+    scroll(); 
   };
 
   useEffect(() => {

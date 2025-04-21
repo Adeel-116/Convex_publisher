@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import HeaderButton from "./HeaderButton";
@@ -45,7 +45,6 @@ function Header({ onOpenQuote }) {
             </button>
           </div>
 
-          {/* Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <HeaderButton
               btnText="Book A Call"

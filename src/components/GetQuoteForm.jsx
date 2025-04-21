@@ -4,7 +4,7 @@ import SelectBox from '../components/SelectBox';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { AiOutlineClose } from 'react-icons/ai';
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 import Button from "../components/Button";
 
 const GetAQuoteForm = ({ onClose }) => {
@@ -174,7 +174,7 @@ const GetAQuoteForm = ({ onClose }) => {
                         required
                         value={formData.comments}
                         onChange={handleChange}
-                        className="text-sm font-medium w-full py-2 px-3 border-2 text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black transition-colors duration-200"
+                        className="text-sm font-medium w-full py-2 px-3 border-2 bg-white text-black border-gray-300 hover:border-gray-400 focus:border-black focus:ring-black transition-colors duration-200"
                         rows={5}
                     />
                 </div>

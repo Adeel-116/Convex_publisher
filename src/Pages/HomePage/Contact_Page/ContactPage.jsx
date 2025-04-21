@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../../components/Header";
 import BookCallContact from "../../../components/BookCallContact";
 import InputField from "../../../components/InputField";
@@ -8,8 +8,23 @@ import { CiCircleMinus } from "react-icons/ci";
 import Testimonials from "../../../components/Testimonials";
 import ContactForm from "../../../components/ContactForm";
 import Footer from "../../../components/Footer";
+import WatsappCTA from "../../../components/HomePage_Components/WatsappCTA";
+import FloatingQuoteBox from "../../../components/HomePage_Components/FloatingQuoteBox"
 
 function ContactPage() {
+    const [showButtons, setShowButton] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+          const currentScrollPosition = window.pageYOffset;
+          console.log(currentScrollPosition);
+          setShowButton(currentScrollPosition > 500);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+
     const Data =
         [
             {
@@ -51,11 +66,11 @@ function ContactPage() {
 
 
 
-        const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
 
-        const handleToggle = (index) => {
-            setActiveIndex(activeIndex === index ? null : index);
-        };
+    const handleToggle = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
 
 
@@ -201,20 +216,20 @@ function ContactPage() {
                             {Data.map((currentValue, index) => {
                                 return (
                                     <>
-                                    <div key={index} className="w-full border-b-[1px] px-4 py-5 border-[#dbdbdb]">
-                                        <div
-                                            className="flex items-center justify-between cursor-pointer"
-                                            onClick={() => handleToggle(index)}
-                                        >
-                                            <p className="text-[#1e1e1e] text-[14px]">{currentValue.serviceName}</p>
-                                            <div>
-                                                {activeIndex === index ? (
-                                                    <CiCircleMinus fill="#000000" size={"16px"} />
-                                                ) : (
-                                                    <IoIosAddCircleOutline color="#000000" size={"16px"} />
-                                                )}
+                                        <div key={index} className="w-full border-b-[1px] px-4 py-5 border-[#dbdbdb]">
+                                            <div
+                                                className="flex items-center justify-between cursor-pointer"
+                                                onClick={() => handleToggle(index)}
+                                            >
+                                                <p className="text-[#1e1e1e] text-[14px]">{currentValue.serviceName}</p>
+                                                <div>
+                                                    {activeIndex === index ? (
+                                                        <CiCircleMinus fill="#000000" size={"16px"} />
+                                                    ) : (
+                                                        <IoIosAddCircleOutline color="#000000" size={"16px"} />
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                         {activeIndex === index && (
                                             <div className="md:w-80 w-full  p-5 bg-[#FFFFFF]">
@@ -222,9 +237,9 @@ function ContactPage() {
                                                 <p className="text-[#4E58F7] mt-1 text-[14px]">Read more...</p>
                                             </div>
                                         )}
-                                
-                                </>
-                                    );
+
+                                    </>
+                                );
 
                             })}
                         </div>
@@ -236,6 +251,17 @@ function ContactPage() {
             <Testimonials />
             <ContactForm />
             <Footer />
+            <WatsappCTA />
+
+
+            {showButtons && (
+                <FloatingQuoteBox
+                    show={showButtons}
+                    formData={formData}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                />
+            )}
         </>
 
 

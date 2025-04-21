@@ -1,11 +1,45 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Header from '../../components/Header'
 import { FaCaretRight } from "react-icons/fa6";
 import Testimonials from '../../components/Testimonials';
 import ContactForm from '../../components/ContactForm';
 import Footer from '../../components/Footer';
+import WatsappCTA from '../../components/HomePage_Components/WatsappCTA';
+import FloatingQuoteBox from '../../components/HomePage_Components/FloatingQuoteBox';
 
 function Term_Conditions() {
+   const [formData, setFormData] = useState({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            budget: "",
+            comments: "",
+        });
+  
+     const [showButtons, setShowButton] = useState(false);
+        useEffect(() => {
+            const handleScroll = () => {
+              const currentScrollPosition = window.pageYOffset;
+              console.log(currentScrollPosition);
+              setShowButton(currentScrollPosition > 500);
+            };
+        
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+          }, []);
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+  
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(formData);
+  };
+
+
   return (
     <>
       <header className="w-full bg-white pt-20">
@@ -79,6 +113,17 @@ function Term_Conditions() {
         <Testimonials />
         <ContactForm />
         <Footer />
+        <WatsappCTA />
+
+
+            {showButtons && (
+                <FloatingQuoteBox
+                    show={showButtons}
+                    formData={formData}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                />
+            )}
 
     </>
 

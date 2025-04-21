@@ -1,6 +1,6 @@
-import Button from "../Button"
+
 import PublishingSectionCard from "./PublishingSectionCard";
-import ServiceImage from "../../assets/service.png"
+import ServiceImage from "../../assets/service.webp"
 
 const PublishingJourney = () => {
   return (

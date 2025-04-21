@@ -8,7 +8,7 @@ import img5 from "../../assets/top-seo-badge-home.webp";
 import img2 from "../../assets/top-markeintg-agencies.png";
 import img1 from "../../assets/clutch.png";
 
-function HeroSection({onOpenQuote}) {
+function HeroSection({ onOpenQuote }) {
   const reviewImages = [img1, img2, img3, img4, img5];
 
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -31,7 +31,11 @@ function HeroSection({onOpenQuote}) {
           <div className="button flex space-x-4 mt-3 flex-wrap gap-y-3">
             <Button text="Live Chat" />
             <Button text="Get A Quote" onClick={onOpenQuote} />
-            <Button text="+1302-518-4405" />
+            
+            <a href="tel:+13025184405">
+              <Button text="+1302-518-4405" />
+            </a>
+            
           </div>
 
           <div className="flex h-auto gap-3 flex-row flex-wrap  mt-1">
@@ -65,17 +69,17 @@ function HeroSection({onOpenQuote}) {
 
 
         {isFormOpen && (
-        <GetAQuoteForm
-          onClose={() => setIsFormOpen(false)}
-          onSubmit={(data) => {
-            setIsFormOpen(false);
-          }}
-        />
-      )}
+          <GetAQuoteForm
+            onClose={() => setIsFormOpen(false)}
+            onSubmit={(data) => {
+              setIsFormOpen(false);
+            }}
+          />
+        )}
       </div>
 
-      
-      
+
+
     </>
   );
 }
