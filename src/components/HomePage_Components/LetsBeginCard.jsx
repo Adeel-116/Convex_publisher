@@ -3,10 +3,10 @@ import Button from "../Button";
 import BookImage  from "../../assets/books.webp"
 
 
-const LetsBeginCard = ({onBookQuote}) => {
+const LetsBeginCard = ({onBookQuote, obj}) => {
 
   return (
-    <div className="w-full h-auto flex md:flex-nowrap flex-wrap gap-y-3">
+    <div className="w-full h-auto flex md:flex-nowrap flex-wrap gap-y-3 pb-10">
       <div className="xl:w-[55%] md:w-[60%] w-full  flex flex-col gap-y-1 justify-center">
         <div className="w-full mx-auto">
           
@@ -14,12 +14,10 @@ const LetsBeginCard = ({onBookQuote}) => {
            
             <div className="">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-                Let’s Begin
+                {obj.heading}
               </h1>
               <p className="text-gray-600 mt-2 lg:text-[16px] text-[15px]">
-                We are a ghostwriting and Publication company, providing a range
-                of book services to help make the work of writers easier.
-                Contact us today to find out more!
+                {obj.paragraph}
               </p>
             </div>
 

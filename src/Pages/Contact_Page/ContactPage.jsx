@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../../components/Header";
-import BookCallContact from "../../../components/BookCallContact";
-import InputField from "../../../components/InputField";
-import Button from "../../../components/Button";
+import Header from "../../components/Header";
+import BookCallContact from "../../components/BookCallContact";
+import InputField from "../../components/InputField";
+import Button from "../../components/Button";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { CiCircleMinus } from "react-icons/ci";
-import Testimonials from "../../../components/Testimonials";
-import ContactForm from "../../../components/ContactForm";
-import Footer from "../../../components/Footer";
-import WatsappCTA from "../../../components/HomePage_Components/WatsappCTA";
-import FloatingQuoteBox from "../../../components/HomePage_Components/FloatingQuoteBox"
+import Testimonials from "../../components/Testimonials";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
+import WatsappCTA from "../../components/HomePage_Components/WatsappCTA";
+import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuoteBox"
 
 function ContactPage() {
     const [showButtons, setShowButton] = useState(false);

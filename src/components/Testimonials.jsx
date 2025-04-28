@@ -9,7 +9,7 @@ function Testimonials() {
     {
       id: 1,
       content:
-        "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Publisher. They were able to help get my ideas into the exact words I was looking for.",
+        "I am a writer but was finding it tough writing due to stress. I recently got divorced and needed my book published soon. This is when I came across Convex Book Publishers. They were able to help get my ideas into the exact words I was looking for.",
       name: "Ann Smith",
       role: "Writer",
       shortName: "AS"
@@ -17,7 +17,7 @@ function Testimonials() {
     {
       id: 2,
       content:
-        "If you need a book cover design for your book, I will suggest Convex Book Publisher. I got the perfect book cover from them.",
+        "If you need a book cover design for your book, I will suggest Convex Book Publishers. I got the perfect book cover from them.",
       name: "Peter Black",
       role: "Author",
       shortName: "PB"
@@ -42,7 +42,7 @@ function Testimonials() {
     {
       id: 5,
       content:
-        "It was tough figuring out the technical aspects of making an audiobook. This is when I found out about Convex Book Publisher. They helped make my book an audiobook.",
+        "It was tough figuring out the technical aspects of making an audiobook. This is when I found out about Convex Book Publishers. They helped make my book an audiobook.",
       name: "John Black",
       role: "Author",
       shortName: "JB"
@@ -50,7 +50,7 @@ function Testimonials() {
     {
       id: 6,
       content:
-        "Convex Book Publisher Writers was recommended to me by my friend. He saw that I was finding it difficult to complete my work. I had the plot but was finding it stressful to make this into a readable book. They were able to help me out.",
+        "Convex Book Publishers Writers was recommended to me by my friend. He saw that I was finding it difficult to complete my work. I had the plot but was finding it stressful to make this into a readable book. They were able to help me out.",
       name: "Leena Travis",
       role: "Writer",
       shortName: "LT"
@@ -102,7 +102,7 @@ function Testimonials() {
 
   return (
     <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col py-5 sm:py-5">
-      <h2 className="text-black text-center lg:text-4xl md:text-3xl text-2xl font-bold">
+      <h2 className="text-black text-center lg:text-[40px] md:text-3xl text-2xl font-bold">
         What Our Past Clients Have To Say
       </h2>
       <p className="text-black mt-3 md:w-[60%] w-full text-center">

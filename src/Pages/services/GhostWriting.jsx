@@ -12,10 +12,11 @@ import Footer from "../../components/Footer";
 import GetAQuoteForm from "../../components/GetQuoteForm";
 import WatsappCTA from "../../components/HomePage_Components/WatsappCTA";
 import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuoteBox";
+import ServiceCard from "../../components/ServiceCard";
 import { GlobalContext } from "../../context/globalContext";
 
-function HomePage() {
-   const { homePageContent } = useContext(GlobalContext)
+function GhostWriting() {
+   const { ghostwritingContent } = useContext(GlobalContext)
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [showButtons, setShowButton] = useState(false);
   const [formData, setFormData] = useState({
@@ -58,7 +59,7 @@ function HomePage() {
         </header>
 
         <section className="hero-Section bg-image3 w-full relative py-15 bg-gray-900 flex justify-center items-center">
-          <HeroSection onOpenQuote={() => setIsFormOpen(true)} obj = {homePageContent.heroSection}  />
+          <HeroSection onOpenQuote={() => setIsFormOpen(true)} obj = {ghostwritingContent.heroSection}  />
         </section>
 
         <div className="w-full">
@@ -66,19 +67,23 @@ function HomePage() {
         </div>
 
         <section className="w-full h-auto flex justify-center">
-          <PublishingJourney obj= {homePageContent.publishingJourney} />
+          <PublishingJourney obj= {ghostwritingContent.publishingJourney} />
         </section>
 
         <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
-          <CTA onOpenQuote={() => setIsFormOpen(true)}  obj = {homePageContent.CTA}/>
+          <CTA onOpenQuote={() => setIsFormOpen(true)}  obj = {ghostwritingContent.CTA}/>
         </section>
 
         <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
-          <PublishingProcess obj = {homePageContent.ourPublishingProcess} />
+          <ServiceCard  obj= {ghostwritingContent.ourApproach}/>
         </section>
 
         <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
-          <LetsBeginCard onBookQuote={() => setIsFormOpen(true)} obj = {homePageContent.letBeginsCTA} />
+          <PublishingProcess obj = {ghostwritingContent.ourPublishingProcess} />
+        </section>
+
+        <section className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto">
+          <LetsBeginCard onBookQuote={() => setIsFormOpen(true)} obj = {ghostwritingContent.letBeginsCTA} />
         </section>
 
         <div className="bg-[#FAFBFD]">
@@ -103,10 +108,9 @@ function HomePage() {
           show={showButtons}
         />
       )}
-
       {isFormOpen && <GetAQuoteForm onClose={() => setIsFormOpen(false)} />}
     </>
   );
 }
 
-export default HomePage;
+export default GhostWriting;

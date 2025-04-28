@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import Header from "../../components/Header";
+import Header from "../components/Header";
 import { FaCaretRight } from "react-icons/fa6";
-import Testimonials from '../../components/Testimonials';
-import ContactForm from '../../components/ContactForm';
-import Footer from '../../components/Footer';
-import WatsappCTA from "../../components/HomePage_Components/WatsappCTA";
-import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuoteBox";
+import Testimonials from '../components/Testimonials';
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
+import WatsappCTA from "../components/HomePage_Components/WatsappCTA";
+import FloatingQuoteBox from "../components/HomePage_Components/FloatingQuoteBox";
 
 function Privacy_Policy() {
 
@@ -86,13 +86,13 @@ function Privacy_Policy() {
         <ul class="w-full py-1">
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
             <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />
-            Information of clients at Premium Book Publishers is kept extremely
+            Information of clients at Convex Book Publishers is kept extremely
             secure during transmission by the use of the Secure Sockets Layer
             (SSL) Software which encrypts information that client puts in.
           </li>
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
             <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />
-            Premium Book Publishers follows generally accepted industry
+            Convex Book Publishers follows generally accepted industry
             standards to protect the personal information that is being
             submitted by the client during transmission and once we receive it.
             However, since no method of transmission over the Internet, or
@@ -119,7 +119,7 @@ function Privacy_Policy() {
 
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
             <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />
-            Premium Book Publishers utilizes services of credit card processing
+            Convex Book Publishers utilizes services of credit card processing
             companies to bill you for services. These companies never share,
             store, save or use exclusive information for any other purposes.
           </li>
@@ -152,7 +152,7 @@ function Privacy_Policy() {
 
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
             <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />
-            Premium Book Publishers keeps track of your IP address to help
+            Convex Book Publishers keeps track of your IP address to help
             diagnose problems with our server and to administer our website.
             Your IP address is also used to gather broad demographic information
             about you, such as your location and your Internet service provider.

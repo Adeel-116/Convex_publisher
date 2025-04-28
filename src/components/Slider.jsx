@@ -15,7 +15,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 function Slider() {
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
-  const speed = 1;
+  const speed = 2;
 
   const startScrolling = () => {
     const scroll = () => {

@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
             <p className="flex items-center gap-2">
               <FaEnvelope className="text-white" />
-              info@premiumbookpublishers.com
+              info@convexbookpublishers.com
             </p>
             <p className="flex items-center gap-2">
               <FaPhoneAlt className="text-white" />
@@ -93,22 +93,23 @@ const Footer = () => {
             <h6 className="font-bold uppercase mb-4 text-white">Services</h6>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="space-y-2 text-white text-[14px]">
-                <p>Ghost Writing</p>
-                <p>Editing</p>
-                <p>Publishing</p>
-                <p>Proofreading</p>
-                <p>Audio Book</p>
-                <p>Blog Writing</p>
-                <p>Website Content Writing</p>
+                <NavLink to="/ghost-book-writing-service" className="block">Ghost Writing</NavLink>
+                <NavLink to="/editing-service" className="block">Editing</NavLink>
+                <NavLink to="/" className="block">Publishing</NavLink>
+                <NavLink to="/proofreading-service" className="block">Proofreading</NavLink>
+                <NavLink to="/audio-book-service" className="block">Audio Book</NavLink>
+                <NavLink to="/blog-writing-service" className="block">Blog Writing</NavLink>
+                <NavLink to="/website-content-writing" className="block">Website Content Writing</NavLink>
               </div>
               <div className="space-y-2 text-white text-[14px] ">
-                <p>Book Cover</p>
-                <p>Book Promotion</p>
-                <p>Formatting</p>
-                <p>e-Book Writing</p>
-                <p>Book Video Trailer</p>
-                <p>Author Website</p>
-                <p>Article Writing</p>
+
+                <NavLink to="/book-cover-design" className="block">Book Cover</NavLink>
+                <NavLink to="/book-promotion" className="block">Book Promotion</NavLink>
+                <NavLink to="/book-formatting" className="block">Formatting</NavLink>
+                <NavLink to="/ebook-writing-service" className="block">e-Book Writing</NavLink>
+                <NavLink to="/book-video-trailer" className="block">Book Video Trailer</NavLink>
+                <NavLink to="/book-author-website" className="block">Author Website</NavLink>
+                <NavLink to="/article-writing-service" className="block">Article Writing</NavLink>
               </div>
             </div>
           </div>
@@ -152,9 +153,9 @@ const Footer = () => {
         <div className="container xl:w-[65%] lg:w-[90%] md:w-[95%] sm:w-[80%] lg:px-0 px-5 w-[90%] mx-auto py-4 flex flex-col text-white">
           <p className="text-[13.5px] md:text-start text-center font-medium text-[#5025e6]">Disclaimer:</p>
           <p className="text-[11px] md:text-start text-center">
-            Once delivered, the services offered by Convex Book Publisher
+            Once delivered, the services offered by Convex Book Publishers
             become the clients' property. Once your work is accepted by a
-            publishing house, Convex Book Publisher will not retain any
+            publishing house, Convex Book Publishers will not retain any
             ownership rights.
           </p>
         </div>

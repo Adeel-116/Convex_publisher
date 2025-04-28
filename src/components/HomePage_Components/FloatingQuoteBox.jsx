@@ -35,7 +35,7 @@ const FloatingQuoteBox = ({ show }) => {
   return (
     <div className="w-[420px] fixed top-[16%] right-[-370px] z-10 group sm:flex hidden">
       <div
-        className="w-[280px] p-4 absolute right-[140px] top-[70px] cursor-pointer flex items-center 
+        className="w-[280px] p-4 absolute right-[139px] top-[70px] cursor-pointer flex items-center 
                 bg-gradient-to-br from-[#4E58F7] to-[#53b3eb87] 
                   transition-all duration-300 ease-in-out hover:right-[300px]"
       >
@@ -74,7 +74,7 @@ const FloatingQuoteBox = ({ show }) => {
           Let's Get Started
         </p>
 
-        <div className="bg-white shadow-2xl absolute top-[-60%] left-[50px] py-7 px-7 w-[350px] h-auto">
+        <div className="bg-white shadow-2xl absolute top-[-70%] left-[50px] py-7 px-7 w-[350px] h-auto ">
           <h3 className="text-[27px] text-black font-semibold">
             Sign Up Now &
           </h3>
@@ -92,7 +92,7 @@ const FloatingQuoteBox = ({ show }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              extraClases={"md:py-3.5 py-[9px] px-3.5"}
+              extraClases={"md:py-1 lg:py-[9px] lg:px-3.5"}
             />
 
             <InputField
@@ -102,7 +102,7 @@ const FloatingQuoteBox = ({ show }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              extraClases={"md:py-3.5 py-[9px] px-3.5"}
+              extraClases={"md:py-1 lg:py-[9px] lg:px-3.5"}
             />
 
             <SelectBox
@@ -126,7 +126,7 @@ const FloatingQuoteBox = ({ show }) => {
                 "Author Website",
                 "Article Writing",
               ]}
-              extraClases={"md:py-3.5 py-[9px] px-3.5"}
+              extraClases={"md:py-1 lg:py-[9px] lg:px-3.5"}
             />
 
             <SelectBox
@@ -145,7 +145,7 @@ const FloatingQuoteBox = ({ show }) => {
                 "Up to 9000",
                 "Above 10000",
               ]}
-              extraClases={"md:py-3.5 py-[9px] px-3.5"}
+              extraClases={"md:py-1 lg:py-[9px] lg:px-3.5"}
             />
 
             <InputField
@@ -155,7 +155,7 @@ const FloatingQuoteBox = ({ show }) => {
               value={formData.phone}
               onChange={handleChange}
               required
-              extraClases={"md:py-3.5 py-[9px] px-3.5"}
+              extraClases={"md:py-1 lg:py-[9px] lg:px-3.5"}
             />
 
             <textarea
@@ -163,7 +163,7 @@ const FloatingQuoteBox = ({ show }) => {
               value={formData.message}
               onChange={handleChange}
               className="w-full py-3 px-3.5 text-[13px] border-2 font-medium text-black border-gray-300 hover:border-gray-400 rounded-[3px]"
-              rows="3"
+              rows="2"
               placeholder="Enter message here"
             />
 

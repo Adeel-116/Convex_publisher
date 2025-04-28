@@ -37,7 +37,7 @@ body{
 
 
 h1 {
-  @apply 2xl:text-5xl xl:text-[50px] lg:text-5xl text-3xl font-bold;
+  @apply 2xl:text-[50px] xl:text-[50px] lg:text-5xl text-3xl font-bold;
 }
 
 h4 {

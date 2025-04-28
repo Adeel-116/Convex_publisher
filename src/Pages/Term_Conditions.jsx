@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import Header from '../../components/Header'
+import Header from '../components/Header'
 import { FaCaretRight } from "react-icons/fa6";
-import Testimonials from '../../components/Testimonials';
-import ContactForm from '../../components/ContactForm';
-import Footer from '../../components/Footer';
-import WatsappCTA from '../../components/HomePage_Components/WatsappCTA';
-import FloatingQuoteBox from '../../components/HomePage_Components/FloatingQuoteBox';
+import Testimonials from '../components/Testimonials';
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
+import WatsappCTA from '../components/HomePage_Components/WatsappCTA';
+import FloatingQuoteBox from '../components/HomePage_Components/FloatingQuoteBox';
 
 function Term_Conditions() {
   
@@ -29,7 +29,7 @@ function Term_Conditions() {
       </header>
       <div className='2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] flex flex-col gap-y-1 w-[90%] mx-auto text-black py-10'>
         <h1 className='w-full text-[#223235] text-[40px]'>Terms & Conditions</h1>
-        <p className='w-full text-[#666666]'>The following terms and conditions apply to projects undertaken by www.premiumbookpublishers.com</p>
+        <p className='w-full text-[#666666]'>The following terms and conditions apply to projects undertaken by www.convexbookpublishers.com</p>
         <h3 className='font-semibold text-[32px] text-[#333333]'>COPYRIGHT</h3>
         <p className='w-full text-[14px] text-[#666666]'>You will hold full copyright to the content that we will develop for you and deliver as per the agreed terms. We will hold no copyright whatsoever on the content and you are free to publish and use it as per your wish.</p>
         <h3 className='font-semibold text-[32px] text-[#333333]'>PAYMENT</h3>
@@ -62,9 +62,9 @@ function Term_Conditions() {
         <h3 className='font-semibold text-[32px] text-[#333333]'>REFUND POLICY</h3>
         <p className='w-full text-[14px] text-[#666666]'>You may claim a full refund of your amount before we have started working on your project. However, once the work has started on a project the refund will be processed after deducting any applicable transaction charges from the amount.
 
-          <br /><br /> A refund request can be submitted if you are not satisfied with any product or service provided by premiumbookpublishers within 5 days of your order completion. Certain percentage based refund would be granted if we are unable to provide required service through our unlimited revision policy. If no refund request is received within five days after your order has been delivered, your satisfaction over the delivered order shall be assumed by both the parties.
+          <br /><br /> A refund request can be submitted if you are not satisfied with any product or service provided by convexbookpublishers within 5 days of your order completion. Certain percentage based refund would be granted if we are unable to provide required service through our unlimited revision policy. If no refund request is received within five days after your order has been delivered, your satisfaction over the delivered order shall be assumed by both the parties.
 
-          <br /><br />On the off chance that you have a special complaint scenario and request a full amount refund, then, at that point, your case will be sent to the evaluation team. On the off chance that after every one of the revisions you actually don't feel happy with the work and request a full refund, don't stress we won't disappoint you. The evaluation team will evaluate the content in contrast to your request details. They will take an unbiased decision dependent on realities and proof. In case if there is any missing or weakness in the content you will get a full refund. Premium Book Publishers will not refund any amount on change of mind before or after the project has started.</p>
+          <br /><br />On the off chance that you have a special complaint scenario and request a full amount refund, then, at that point, your case will be sent to the evaluation team. On the off chance that after every one of the revisions you actually don't feel happy with the work and request a full refund, don't stress we won't disappoint you. The evaluation team will evaluate the content in contrast to your request details. They will take an unbiased decision dependent on realities and proof. In case if there is any missing or weakness in the content you will get a full refund. Convex Book Publishers will not refund any amount on change of mind before or after the project has started.</p>
 
 
         <h3 className='font-semibold text-[32px] leading-none py-2  text-[#333333]'>TERM OF USE OF THIS WEBSITE</h3>
@@ -72,7 +72,7 @@ function Term_Conditions() {
         <ul class="list  mb-[15px] w-full">
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
           <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />
-            The information provided on www.premiumbookpublishers.com includes, but is not limited to, the services provided by the company and does not render any advice, certifications, guarantees or warranties.
+            The information provided on www.convexbookpublishers.com includes, but is not limited to, the services provided by the company and does not render any advice, certifications, guarantees or warranties.
           </li>
           <li className="text-[#666666] pb-[10px] leading-[20px] text-[14px] font-normal relative flex items-start gap-2">
           <FaCaretRight className="text-[#1f295d] text-[13px] mt-[2px] min-w-[13px]" />

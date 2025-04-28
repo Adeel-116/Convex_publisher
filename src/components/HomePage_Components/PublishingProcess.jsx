@@ -1,40 +1,12 @@
 import React from 'react';
 
-const steps = [
-    {
-      title: 'Submit Draft',
-      description:
-        'Our team will evaluate your draft when you submit it, and asks the clients for all relevant details, such a publishing as well as printing needs.',
-    },
-    {
-      title: 'Final Editing Process',
-      description:
-        'The team then reviews your draft to check for final edits. Here they carry out analysis and proofreading.',
-    },
-    {
-      title: 'Typesetting Plus Illustrations',
-      description:
-        'When the draft has been edited, the team chooses the font, layout, table of contents, spacing plus images and illustrations if needed.',
-    },
-    {
-      title: 'Designing Phase',
-      description:
-        'The designing process then occurs where the front and back covers of the book get designed. This including the author bio.',
-    },
-    {
-      title: 'Publication Plus Distribution',
-      description:
-        'When the edits and designs get approved, the manuscript will be submitted in the clients desired format for publication across various platforms.',
-    },
-  ];
-  
+const PublishingProcess = ({obj}) => {
 
-const PublishingProcess = () => {
   return (
     <section className="sm:px-4 sm:py-8 text-black lg:py-20">
     <div className="max-w-7xl mx-auto">
       <h1 className="md:text-4xl font-semibold text-center mb-8 md:mb-12">
-        Our Publication Process
+        {obj.heading}
       </h1>
 
       <div className="relative">
@@ -42,7 +14,7 @@ const PublishingProcess = () => {
         <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full bg-[#3a45f6] w-1" />
 
         <div className="space-y-12 md:space-y-0">
-          {steps.map((step, index) => {
+          {obj.steps.map((step, index) => {
             const isEven = index % 2 !== 0;
             return (
               <div
