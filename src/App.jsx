@@ -6,8 +6,8 @@ import Term_Conditions from './Pages/Term_Conditions';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import GhostWriting from './Pages/services/GhostWriting';
-import { GlobalContext } from './context/globalContext';
-import globalData from './context/GlobalData';           
+import GlobalContext from './context/globalContext';
+import globalData from './context/GlobalData';          
 import Editing from './Pages/services/Editing';
 import ProofReading from './Pages/services/ProofReading';
 import AudioBook from './Pages/services/AudioBook';
@@ -43,8 +43,6 @@ function App() {
           <Route path="/book-video-trailer" element={<BookVideoTrailer />} />
           <Route path="/book-author-website" element={<AuthorWebsite />} />
           <Route path="/article-writing-service" element={<ArticleWriting />} />
-
-
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>
