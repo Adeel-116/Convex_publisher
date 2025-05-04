@@ -11,7 +11,7 @@ import Footer from "../../components/Footer";
 import GetAQuoteForm from "../../components/GetQuoteForm";
 import WatsappCTA from "../../components/HomePage_Components/WatsappCTA";
 import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuoteBox";
-import { GlobalContext } from "../../context/GlobalContext";
+import { GlobalContext } from "../../context/ContextCreate";
 import ServiceCard from "../../components/ServiceCard";
 
 function WebsiteContentWriting() {
