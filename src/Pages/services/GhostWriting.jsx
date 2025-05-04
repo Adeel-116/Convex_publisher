@@ -13,7 +13,7 @@ import GetAQuoteForm from "../../components/GetQuoteForm";
 import WatsappCTA from "../../components/HomePage_Components/WatsappCTA";
 import FloatingQuoteBox from "../../components/HomePage_Components/FloatingQuoteBox";
 import ServiceCard from "../../components/ServiceCard";
-import { GlobalContext } from "../../context/globalContext";
+import { GlobalContext } from "../../context/GlobalContext";
 
 function GhostWriting() {
    const { ghostwritingContent } = useContext(GlobalContext)
