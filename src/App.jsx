@@ -6,7 +6,7 @@ import Term_Conditions from './Pages/Term_Conditions';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import GhostWriting from './Pages/services/GhostWriting';
-import { GlobalContext } from './context/GlobalContext';
+import { GlobalContext } from '../src/context/GlobalContext';
 import globalData from './context/GlobalData';          
 import Editing from './Pages/services/Editing';
 import ProofReading from './Pages/services/ProofReading';
