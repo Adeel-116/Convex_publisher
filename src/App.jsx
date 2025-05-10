@@ -20,6 +20,7 @@ import Ebook from './Pages/services/Ebook';
 import BookVideoTrailer from './Pages/services/BookVideoTrailer';
 import AuthorWebsite from './Pages/services/AuthorWebsite';
 import ArticleWriting from './Pages/services/ArticleWriting';
+import TestimonialPage from './Pages/TestimonialPage/TestimonialPage';
 function App() {
   return (
     <GlobalContext.Provider value={globalData}>
@@ -43,6 +44,9 @@ function App() {
           <Route path="/book-video-trailer" element={<BookVideoTrailer />} />
           <Route path="/book-author-website" element={<AuthorWebsite />} />
           <Route path="/article-writing-service" element={<ArticleWriting />} />
+          <Route path="/testimonials" element={<TestimonialPage />} />
+
+
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

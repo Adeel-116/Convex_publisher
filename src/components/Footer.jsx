@@ -119,7 +119,7 @@ const Footer = () => {
             <h6 className="font-bold uppercase mb-4">Company</h6>
             <div className="space-y-2 text-[14px]">
               <p>About Us</p>
-              <p>Testimonials</p>
+              <NavLink to="/testimonials" className="hover:underline"><p>Testimonials</p></NavLink>
               <NavLink to="/contact-us" className="hover:underline"><p>Contact Us</p></NavLink>
               <p className="mt-2">Privacy Policy</p>
             </div>
