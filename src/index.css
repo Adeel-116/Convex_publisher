@@ -92,4 +92,17 @@ h6 {
   opacity: 1;
 }
 
+.scrollCustomization{
+  overflow-y: scroll;
+  scrollbar-color: #ECEDF1;
+}
 
+.scrollCustomization::-webkit-scrollbar {
+  width: 10px;
+}
+@media (min-width: 500px) {
+  .scrollCustomization::-webkit-scrollbar-track {
+    background-color: #ECEDF1;
+    border-left: 2px solid #888888;
+  }
+}

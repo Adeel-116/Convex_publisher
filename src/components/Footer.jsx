@@ -118,10 +118,10 @@ const Footer = () => {
           <div className="text-white">
             <h6 className="font-bold uppercase mb-4">Company</h6>
             <div className="space-y-2 text-[14px]">
-              <p>About Us</p>
-              <NavLink to="/testimonials" className="hover:underline"><p>Testimonials</p></NavLink>
-              <NavLink to="/contact-us" className="hover:underline"><p>Contact Us</p></NavLink>
-              <p className="mt-2">Privacy Policy</p>
+              <NavLink to="/testimonials" className="block hover:underline"><p>About Us</p></NavLink>
+              <NavLink to="/testimonials" className="block hover:underline"><p>Testimonials</p></NavLink>
+              <NavLink to="/contact-us" className="block hover:underline"><p>Contact Us</p></NavLink>
+              <NavLink to="/faq" className="block hover:underline"><p>FAQs</p></NavLink>
             </div>
           </div>
         </div>
