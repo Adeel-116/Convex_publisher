@@ -122,6 +122,7 @@ const Footer = () => {
               <NavLink to="/testimonials" className="block hover:underline"><p>Testimonials</p></NavLink>
               <NavLink to="/contact-us" className="block hover:underline"><p>Contact Us</p></NavLink>
               <NavLink to="/faq" className="block hover:underline"><p>FAQs</p></NavLink>
+              <NavLink to="/case-studies" className="block hover:underline"><p>Case Studies</p></NavLink>
             </div>
           </div>
         </div>

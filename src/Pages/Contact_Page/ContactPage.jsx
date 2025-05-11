@@ -3,8 +3,8 @@ import Header from "../../components/Header";
 import BookCallContact from "../../components/BookCallContact";
 import InputField from "../../components/InputField";
 import Button from "../../components/Button";
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { CiCircleMinus } from "react-icons/ci";
+import { MdAddCircleOutline } from "react-icons/md";
+import { FiMinusCircle } from "react-icons/fi";
 import Testimonials from "../../components/Testimonials";
 import ContactForm from "../../components/ContactForm";
 import Footer from "../../components/Footer";
@@ -41,11 +41,11 @@ function ContactPage() {
             },
             {
                 serviceName: "Formatting",
-                Content: "Premium Book Publishers knows that following international standards is important and it can be tough following these as they interfere"
+                Content: "Convex Book Publishers knows that following international standards is important and it can be tough following these as they interfere"
             },
             {
                 serviceName: "Book covers",
-                Content: "Premium Book Publishers gives you excellent books covers for your book. Our professional team of experienced designers can make amazing graphics."
+                Content: "Convex Book Publishers gives you excellent books covers for your book. Our professional team of experienced designers can make amazing graphics."
             },
             {
                 serviceName: "Publishing",
@@ -53,12 +53,12 @@ function ContactPage() {
             },
             {
                 serviceName: "Book Marketing",
-                Content: "It is tough to get known as an author that writes good books. This is where Premium Book Publishers comes in."
+                Content: "It is tough to get known as an author that writes good books. This is where Convex Book Publishers comes in."
 
             },
             {
                 serviceName: "Audio-Book(s)",
-                Content: "Premium Book Publishers can help make your books reach book readers clubs’, by creating top class audiobooks."
+                Content: "Preium Book Publishers can help make your books reach book readers clubs’, by creating top class audiobooks."
 
             }
 
@@ -101,7 +101,7 @@ function ContactPage() {
                         <p className="w-full text-[#666666] mt-3 text-[15px] mb-2">
                             Feel free to give us a call, write to us, or complete the contact
                             form at the bottom of this page. Call Us: +1 302-518-4405 Email:
-                            info@premiumbookpublishers.com
+                            info@convexbookpublishers.com
                         </p>
 
                         <div className="w-full h-auto rounded-xl bg-[#F7F9FC] sm:py-20 py-10 px-5">
@@ -213,9 +213,9 @@ function ContactPage() {
                                                 <p className="text-[#1e1e1e] text-[14px]">{currentValue.serviceName}</p>
                                                 <div>
                                                     {activeIndex === index ? (
-                                                        <CiCircleMinus fill="#000000" size={"16px"} />
+                                                        <FiMinusCircle color="#000000" size={"16px"} />
                                                     ) : (
-                                                        <IoIosAddCircleOutline color="#000000" size={"16px"} />
+                                                        <MdAddCircleOutline color="#000000" size={"16px"} />
                                                     )}
                                                 </div>
                                             </div>

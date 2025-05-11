@@ -22,6 +22,7 @@ import AuthorWebsite from './Pages/services/AuthorWebsite';
 import ArticleWriting from './Pages/services/ArticleWriting';
 import TestimonialPage from './Pages/TestimonialPage/TestimonialPage';
 import FAQ from './Pages/FAQ_page/FAQ';
+import Case_StudiesPage from './Pages/Case_study/Case_StudiesPage';
 
 function App() {
   return (
@@ -48,7 +49,8 @@ function App() {
           <Route path="/article-writing-service" element={<ArticleWriting />} />
           <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/faq" element={<FAQ />} />
-
+          
+          <Route path="/case-studies" element={<Case_StudiesPage />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>
