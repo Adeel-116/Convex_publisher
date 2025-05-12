@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { FaCaretRight } from "react-icons/fa6";
 import Testimonials from '../components/Testimonials';
@@ -6,20 +6,21 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import WatsappCTA from "../components/HomePage_Components/WatsappCTA";
 import FloatingQuoteBox from "../components/HomePage_Components/FloatingQuoteBox";
+import GetAQuoteForm from "../components/GetQuoteForm";
 
 function Privacy_Policy() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [showButtons, setShowButton] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+      console.log(currentScrollPosition);
+      setShowButton(currentScrollPosition > 500);
+    };
 
-   const [showButtons, setShowButton] = useState(false);
-      useEffect(() => {
-          const handleScroll = () => {
-            const currentScrollPosition = window.pageYOffset;
-            console.log(currentScrollPosition);
-            setShowButton(currentScrollPosition > 500);
-          };
-      
-          window.addEventListener("scroll", handleScroll);
-          return () => window.removeEventListener("scroll", handleScroll);
-        }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -175,18 +176,19 @@ function Privacy_Policy() {
       </div>
 
 
-        <Testimonials />
-        <ContactForm />
-        <Footer />
+      <Testimonials />
+      <ContactForm />
+      <Footer />
 
-        <WatsappCTA />
+      <WatsappCTA />
 
 
-            {showButtons && (
-                <FloatingQuoteBox
-                    show={showButtons}
-                />
-            )}
+      {showButtons && (
+        <FloatingQuoteBox
+          show={showButtons}
+        />
+      )}
+      {isFormOpen && <GetAQuoteForm onClose={() => setIsFormOpen(false)} />}
     </>
   );
 }

@@ -18,27 +18,7 @@ function AudioBook() {
    const { audioBookContent } = useContext(GlobalContext)
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [showButtons, setShowButton] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    service: "",
-    budget: "",
-    phone: "",
-    message: "",
-  });
 
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
   useEffect(() => {
     const handleScroll = () => {

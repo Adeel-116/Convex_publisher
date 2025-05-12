@@ -93,23 +93,23 @@ const Footer = () => {
             <h6 className="font-bold uppercase mb-4 text-white">Services</h6>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="space-y-2 text-white text-[14px]">
-                <NavLink to="/ghost-book-writing-service" className="block">Ghost Writing</NavLink>
-                <NavLink to="/editing-service" className="block">Editing</NavLink>
-                <NavLink to="/" className="block">Publishing</NavLink>
-                <NavLink to="/proofreading-service" className="block">Proofreading</NavLink>
-                <NavLink to="/audio-book-service" className="block">Audio Book</NavLink>
-                <NavLink to="/blog-writing-service" className="block">Blog Writing</NavLink>
-                <NavLink to="/website-content-writing" className="block">Website Content Writing</NavLink>
+                <NavLink to="/ghost-book-writing-service" className="block hover:underline">Ghost Writing</NavLink>
+                <NavLink to="/editing-service" className="block hover:underline">Editing</NavLink>
+                <NavLink to="/" className="block hover:underline">Publishing</NavLink>
+                <NavLink to="/proofreading-service" className="block hover:underline">Proofreading</NavLink>
+                <NavLink to="/audio-book-service" className="block hover:underline">Audio Book</NavLink>
+                <NavLink to="/blog-writing-service" className="block hover:underline">Blog Writing</NavLink>
+                <NavLink to="/website-content-writing" className="block hover:underline">Website Content Writing</NavLink>
               </div>
               <div className="space-y-2 text-white text-[14px] ">
 
-                <NavLink to="/book-cover-design" className="block">Book Cover</NavLink>
-                <NavLink to="/book-promotion" className="block">Book Promotion</NavLink>
-                <NavLink to="/book-formatting" className="block">Formatting</NavLink>
-                <NavLink to="/ebook-writing-service" className="block">e-Book Writing</NavLink>
-                <NavLink to="/book-video-trailer" className="block">Book Video Trailer</NavLink>
-                <NavLink to="/book-author-website" className="block">Author Website</NavLink>
-                <NavLink to="/article-writing-service" className="block">Article Writing</NavLink>
+                <NavLink to="/book-cover-design" className="block hover:underline">Book Cover</NavLink>
+                <NavLink to="/book-promotion" className="block hover:underline">Book Promotion</NavLink>
+                <NavLink to="/book-formatting" className="block hover:underline">Formatting</NavLink>
+                <NavLink to="/ebook-writing-service" className="block hover:underline">e-Book Writing</NavLink>
+                <NavLink to="/book-video-trailer" className="block hover:underline">Book Video Trailer</NavLink>
+                <NavLink to="/book-author-website" className="block hover:underline">Author Website</NavLink>
+                <NavLink to="/article-writing-service" className="block hover:underline">Article Writing</NavLink>
               </div>
             </div>
           </div>
@@ -118,11 +118,13 @@ const Footer = () => {
           <div className="text-white">
             <h6 className="font-bold uppercase mb-4">Company</h6>
             <div className="space-y-2 text-[14px]">
-              <NavLink to="/testimonials" className="block hover:underline"><p>About Us</p></NavLink>
+              <NavLink to="/case-studies" className="block hover:underline"><p>Case Studies</p></NavLink>
               <NavLink to="/testimonials" className="block hover:underline"><p>Testimonials</p></NavLink>
               <NavLink to="/contact-us" className="block hover:underline"><p>Contact Us</p></NavLink>
               <NavLink to="/faq" className="block hover:underline"><p>FAQs</p></NavLink>
-              <NavLink to="/case-studies" className="block hover:underline"><p>Case Studies</p></NavLink>
+              <NavLink to="/privacy-policy" className="block hover:underline">
+                <p>Privacy Policy</p>
+              </NavLink>
             </div>
           </div>
         </div>

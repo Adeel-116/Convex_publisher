@@ -58,11 +58,11 @@ function Testimonials() {
   ];
 
   const goNext = () => {
-    setSlideNumber((prev) => (prev + 2) % slideArray.length);
+    setSlideNumber((prev) => (prev + 1) % slideArray.length);
   };
 
   const goPrev = () => {
-    setSlideNumber((prev) => (prev - 2 + slideArray.length) % slideArray.length);
+    setSlideNumber((prev) => (prev - 1 + slideArray.length) % slideArray.length);
   };
 
   useEffect(() => {
@@ -76,7 +76,6 @@ function Testimonials() {
     slideArray[slideNumber],
     slideArray[(slideNumber + 1) % slideArray.length],
   ];
-
 
   const handleStart = (e) => {
     startX.current = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
@@ -101,7 +100,9 @@ function Testimonials() {
   };
 
   return (
-    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col py-5 sm:py-5">
+    <div className="2xl:w-[65%] xl:w-[85%] lg:w-[90%] md:w-[95%] sm:w-[80%] w-[90%] mx-auto flex items-center justify-center flex-col py-5 sm:py-5"
+    style={{ userSelect: 'none' }}
+    >
       <h2 className="text-black text-center lg:text-[40px] md:text-3xl text-2xl font-bold">
         What Our Past Clients Have To Say
       </h2>
@@ -109,7 +110,6 @@ function Testimonials() {
         We have completed many book projects and have made clientele happy. Find out what they think of us.
       </p>
 
-      
       <div
         className="w-full overflow-x-hidden py-8 mt-2 relative"
         onMouseDown={handleStart}

@@ -49,7 +49,6 @@ function App() {
           <Route path="/article-writing-service" element={<ArticleWriting />} />
           <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/faq" element={<FAQ />} />
-          
           <Route path="/case-studies" element={<Case_StudiesPage />} />
         </Routes>
       </BrowserRouter>

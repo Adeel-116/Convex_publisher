@@ -106,3 +106,25 @@ h6 {
     border-left: 2px solid #888888;
   }
 }
+
+
+.custom-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.custom-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 10px;
+}
+
+.nav-hover:hover {
+  background-color: #f3f4f6; 
+  color: #1d4ed8;
+}

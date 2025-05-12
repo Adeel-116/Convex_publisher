@@ -6,10 +6,11 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import WatsappCTA from '../components/HomePage_Components/WatsappCTA';
 import FloatingQuoteBox from '../components/HomePage_Components/FloatingQuoteBox';
+import GetAQuoteForm from "../components/GetQuoteForm";
 
 function Term_Conditions() {
-  
-     const [showButtons, setShowButton] = useState(false);
+        const [isFormOpen, setIsFormOpen] = useState(false);
+         const [showButtons, setShowButton] = useState(false);
         useEffect(() => {
             const handleScroll = () => {
               const currentScrollPosition = window.pageYOffset;
@@ -21,7 +22,7 @@ function Term_Conditions() {
             return () => window.removeEventListener("scroll", handleScroll);
           }, []);
 
-
+          
   return (
     <>
       <header className="w-full bg-white pt-20">
@@ -98,11 +99,12 @@ function Term_Conditions() {
         <WatsappCTA />
 
 
-            {showButtons && (
-                <FloatingQuoteBox
-                    show={showButtons}
-                />
-            )}
+        {showButtons && (
+        <FloatingQuoteBox
+          show={showButtons}
+        />
+      )}
+      {isFormOpen && <GetAQuoteForm onClose={() => setIsFormOpen(false)} />}
 
     </>
 
